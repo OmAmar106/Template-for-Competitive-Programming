@@ -1,19 +1,4 @@
 {
-	"cp": {
-		"prefix": "cp",
-		"body": [
-			"import sys,math",
-            "from collections import Counter",
-			"def solve():",
-			"\tn = int(sys.stdin.readline().strip())",
-			"\tL = list(map(int, sys.stdin.readline().split()))",
-			"\t#L1 = list(map(int, sys.stdin.readline().split()))",
-			"\t#st = sys.stdin.readline().strip()",
-			"for _ in range(int(sys.stdin.readline().strip())):",
-			"\tsolve()"
-	    ],  
-		"description": "codeforces template"
-	},
     "gcd": {
 		"prefix": "gcd",
 		"body": [
