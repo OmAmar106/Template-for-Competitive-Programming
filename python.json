@@ -1,22 +1,72 @@
 {
-    "gcd": {
-		"prefix": "gcd",
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"cp": {
+		"prefix": "cp",
 		"body": [
-			"def gcd(a,b):",
+			"import sys,math,random",
+            "from heapq import heappush,heappop",
+            "from bisect import bisect_right,bisect_left",
+            "from collections import Counter,deque,defaultdict",
+            "",
+            "# functions #",
+            "MOD = 998244353",
+            "MOD = 10**9 + 7",
+			"RANDOM = random.randrange(2**62)",
+            "def gcd(a,b):",
 			"\tif a%b==0:",
 			"\t\treturn b",
 			"\telse:",
 			"\t\treturn gcd(b,a%b)",
 			"def lcm(a,b):",
-            "\treturn (a*b)//gcd(a,b)",
+            "\treturn a//gcd(a,b)*b",
+			"def w(x):",
+			"\treturn x ^ RANDOM",
+            "##",
+            "#String hashing : sh, fenwick sortedlist : fsortl, sieve : sieve",
+            "#bucket sorted list : bsortl, segment tree(lazy propogation) : SegmentTree, bootstrap : bootstrap",
+            "#binary indexed tree : BIT, segment tree(point updates) : SegmentPoint",
+            "",
+			"def solve():",
+			"\tn = int(sys.stdin.readline().strip())",
+			"\tL = list(map(int, sys.stdin.readline().split()))",
+			"\t#L1 = list(map(int, sys.stdin.readline().split()))",
+			"\t#st = sys.stdin.readline().strip()",
+			"for _ in range(int(sys.stdin.readline().strip())):",
+			"\tsolve()"
 	    ],  
-		"description": "gcd and lcm"
+		"description": "codeforces template"
 	},
+    "sieve": {
+        "prefix": "sieve",
+        "body": [
+            "def sieve(n):",
+            "\tprimes = []",
+            "\tisp = [1] * (n+1)",
+            "\tisp[0] = isp[1] = 0",
+            "\tfor i in range(2,n+1):",
+            "\t\tif isp[i]:",
+            "\t\t\tprimes.append(i)",
+            "\t\t\tfor j in range(i*i,n+1,i):",
+            "\t\t\t\tisp[j] = 0",
+            "\treturn primes"
+        ]
+    },
     "SortedList": {
         "prefix": "bsortl",
         "body": [
             "from typing import Generic, Iterable, Iterator, List, Tuple, TypeVar, Optional",
-            "from bisect import bisect_right,bisect_left",
             "T = TypeVar('T')",
             "class SortedList(Generic[T]):",
             "\tBUCKET_RATIO = 16",
@@ -201,20 +251,9 @@
         ],
         "description": "Segment Tree implementation with lazy propagation"
     },
-	"h": {
-		"prefix": "h",
-		"body": [
-			"import random",
-			"RANDOM = random.randrange(2**62)",
-			"def w(x):",
-			"\treturn x ^ RANDOM",
-		],
-		"description": "hashing , Use whenever using dictionary,to avoid tle"
-	},
 	"sortl": {
         "prefix": "fsortl",
         "body": [
-			"from bisect import bisect_right, bisect_left",
             "class FenwickTree:",
             "\tdef __init__(self, x):",
             "\t\tbit = self.bit = list(x)",
@@ -345,5 +384,107 @@
             "# the limit of recursion on cf is 10**6"
         ],
         "description": "Decorator to increase recursion limit using the bootstrap method with yield."
+    },
+    "shash": {
+        "prefix": "sh",
+        "body": [
+            "MOD = 10**9 + 7",
+            "def getSubHash(left, right):",
+            "\tleft += 1",
+            "\tright += 1",
+            "\th1 = hash[right]",
+            "\th2 = (hash[left - 1] * power[right - left + 1]) % MOD",
+            "\treturn (h1 + MOD - h2) % MOD",
+            "n = len(st)",
+            "hashset = set()",
+            "hash = [0] * (n + 1)",
+            "power = [0] * (n + 1)",
+            "MOD = 10 ** 9 + 7",
+            "P = 131",
+            "power[0] = 1",
+            "for i in range(n):",
+            "\tpower[i + 1] = (power[i] * P) % MOD",
+            "\thash[i + 1] = (hash[i] * P + ord(st[i])) % MOD",
+            "\thashset.add((hash[i + 1], i + 1))"
+        ],
+        "description": "For hashing of strings."
+    },
+    "BIT": {
+        "prefix": "BIT",
+        "body": [
+            "class BIT:",
+            "\t#Faster than segment tree so use if possbile",
+            "\tdef __init__(self, x):",
+            "\t\t\"\"\"transform list into BIT\"\"\"",
+            "\t\tself.bit = x",
+            "\t\tfor i in range(len(x)):",
+            "\t\t\tj = i | (i + 1)",
+            "\t\t\tif j < len(x):",
+            "\t\t\t\tx[j] += x[i]",
+            "\tdef update(self, idx, x):",
+            "\t\t\"\"\"updates bit[idx] += x\"\"\"",
+            "\t\t#basically after that number greater greater than x will be added",
+            "\t\twhile idx < len(self.bit):",
+            "\t\t\tself.bit[idx] += x",
+            "\t\t\tidx |= idx + 1",
+            "\tdef query(self, end):",
+            "\t\t\"\"\"calc sum(bit[:end])\"\"\"",
+            "\t\t#gives sum of element before end",
+            "\t\tx = 0",
+            "\t\twhile end:",
+            "\t\t\tx += self.bit[end - 1]",
+            "\t\t\tend &= end - 1",
+            "\t\treturn x",
+            "\tdef findkth(self, k):",
+            "\t\t\"\"\"Find largest idx such that sum(bit[:idx]) <= k\"\"\"",
+            "\t\tidx = -1",
+            "\t\tfor d in reversed(range(len(self.bit).bit_length())):",
+            "\t\t\tright_idx = idx + (1 << d)",
+            "\t\t\tif right_idx < len(self.bit) and k >= self.bit[right_idx]:",
+            "\t\t\t\tidx = right_idx",
+            "\t\t\t\tk -= self.bit[idx]",
+            "\t\treturn idx + 1"
+        ]
+    },
+    "SegmentPoint": {
+        "prefix": "SegmentPoint",
+        "body": [
+            "class SegmentTree:",
+            "\t#this is better for point updates and range queries than the",
+            "\t#segment tree using lazy propogation",
+            "\tdef __init__(self, data):",
+            "\t\tself.n = len(data)",
+            "\t\tself.tree = [0] * (2 * self.n)",
+            "\t\tself.build(data)",
+            "\tdef build(self, data):",
+            "\t\tfor i in range(self.n):",
+            "\t\t\tself.tree[self.n + i] = data[i]",
+            "\t\tfor i in range(self.n - 1, 0, -1):",
+            "\t\t\tself.tree[i] = max(self.tree[i * 2], self.tree[i * 2 + 1])",
+            "\tdef update(self, pos, value):",
+            "\t\t# Update the value at the leaf node",
+            "\t\tpos += self.n",
+            "\t\tself.tree[pos] = value",
+            "\t\t# Update the parents",
+            "\t\twhile pos > 1:",
+            "\t\t\tpos //= 2",
+            "\t\t\tself.tree[pos] = max(self.tree[2 * pos], self.tree[2 * pos + 1])",
+            "\tdef query(self, left, right):",
+            "\t\t# Query the maximum value in the range [left, right)",
+            "\t\tleft += self.n",
+            "\t\tright += self.n",
+            "\t\tmax_val = float('-inf')",
+            "\t\twhile left < right:",
+            "\t\t\tif left % 2:",
+            "\t\t\t\tmax_val = max(max_val, self.tree[left])",
+            "\t\t\t\tleft += 1",
+            "\t\t\tif right % 2:",
+            "\t\t\t\tright -= 1",
+            "\t\t\t\tmax_val = max(max_val, self.tree[right])",
+            "\t\t\tleft //= 2",
+            "\t\t\tright //= 2",
+            "\t\treturn max_val"
+        ],
+        "description": "Segment Tree implementation better for point updates and range queries"
     }
 }
