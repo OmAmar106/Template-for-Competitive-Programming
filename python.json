@@ -34,7 +34,7 @@
 			"def w(x):",
 			"\treturn x ^ RANDOM",
             "##",
-            "#String hashing : sh, fenwick sortedlist : fsortl, sieve : sieve",
+            "#String hashing : sh, fenwick sortedlist : fsortl, sieve : sieve, SparseTable : SparseTable",
             "#bucket sorted list : bsortl, segment tree(lazy propogation) : SegmentTree, bootstrap : bootstrap",
             "#binary indexed tree : BIT, segment tree(point updates) : SegmentPoint",
             "",
@@ -388,24 +388,26 @@
     "shash": {
         "prefix": "sh",
         "body": [
-            "MOD = 10**9 + 7",
-            "def getSubHash(left, right):",
+            "def getSubHash(left, right,hash,power):",
+            "\t#returns hash value of [right,left]",
+            "\t#check for two diff hash,power to prevent collision",
             "\tleft += 1",
             "\tright += 1",
             "\th1 = hash[right]",
             "\th2 = (hash[left - 1] * power[right - left + 1]) % MOD",
             "\treturn (h1 + MOD - h2) % MOD",
             "n = len(st)",
-            "hashset = set()",
             "hash = [0] * (n + 1)",
+            "hash1 = [0] * (n + 1)",
             "power = [0] * (n + 1)",
-            "MOD = 10 ** 9 + 7",
-            "P = 131",
-            "power[0] = 1",
+            "power1 = [0] * (n + 1)",
+            "P,P1 = 131,132",
+            "power[0],power1[0] = 1,1",
             "for i in range(n):",
             "\tpower[i + 1] = (power[i] * P) % MOD",
+            "\tpower1[i+1] = (power1[i] * P1) % MOD",
             "\thash[i + 1] = (hash[i] * P + ord(st[i])) % MOD",
-            "\thashset.add((hash[i + 1], i + 1))"
+            "\thash1[i + 1] = (hash1[i] * P1 + ord(st[i])) % MOD",
         ],
         "description": "For hashing of strings."
     },
@@ -486,5 +488,29 @@
             "\t\treturn max_val"
         ],
         "description": "Segment Tree implementation better for point updates and range queries"
+    },
+    "SparseTable": {
+        "prefix": "SparseTable",
+        "body": [
+            "class SparseTable:",
+            "\tdef __init__(self, arr):",
+            "\t\tself.n = len(arr)",
+            "\t\tself.table = [[0 for i in range(int((math.log(self.n, 2)+1)))] for j in range(self.n)]",
+            "\t\tself.build(arr)",
+            "\tdef build(self, arr):",
+            "\t\tfor i in range(0, self.n):",
+            "\t\t\tself.table[i][0] = arr[i]",
+            "\t\tj = 1",
+            "\t\twhile (1 << j) <= self.n:",
+            "\t\t\ti = 0",
+            "\t\t\twhile i <= self.n - (1 << j):",
+            "\t\t\t\tself.table[i][j] = math.gcd(self.table[i][j - 1], self.table[i + (1 << (j - 1))][j - 1])",
+            "\t\t\t\ti += 1",
+            "\t\t\tj += 1",
+            "\tdef query(self, L, R):",
+            "\t\tj = int(math.log2(R - L + 1))",
+            "\t\treturn math.gcd(self.table[L][j], self.table[R - (1 << j) + 1][j])"
+        ],
+        "description": "Sparse Table"
     }
 }
