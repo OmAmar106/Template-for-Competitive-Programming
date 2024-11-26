@@ -39,7 +39,7 @@
             "#String hashing : sh, fenwick sortedlist : fsortl, Number : numtheory, SparseTable : SparseTable",
             "#bucket sorted list : bsortl, segment tree(lazy propogation) : SegmentTree, bootstrap : bootstrap",
             "#binary indexed tree : BIT, segment tree(point updates) : SegmentPoint, Convex Hull : hull", 
-            "#Combinatorics : pnc, Diophantine Equations : dpheq",
+            "#Combinatorics : pnc, Diophantine Equations : dpheq, Graphs : graphs",
             "#Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "",
 			"def solve():",
