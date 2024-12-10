@@ -995,8 +995,20 @@
             "\t\t\t\tif finished[child]:",
             "\t\t\t\t\tdp[start] += dp[child]",
             "\t\t\tfinished[start] = True",
+            "\treturn visited, dp",
             "",
-            "\treturn visited, dp"
+            "@bootstrap",
+            "def rec(cur,color):",
+            "\t# If asking for SCC, rather than d, use the reversed graph",
+            "\t# Also the traversel should be in reverse of topological order",
+            "\tvisited = [],ans = [],d = {} # remove this",
+            "\tvisited[cur] = True",
+            "\tans[cur] = color",
+            "\tfor i in d[cur]:",
+            "\t\tif visited[i]:",
+            "\t\t\tcontinue",
+            "\t\tans1 = (yield rec(i,color))",
+            "\tyield -1"
         ],
         "description": "graphs implementation"
     },
