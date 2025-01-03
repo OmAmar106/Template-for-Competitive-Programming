@@ -1700,7 +1700,7 @@
             "\tn = 1 << m.bit_length()",
             "\tP = P + [0] * (n - len(P))",
             "\tQ = Q + [0] * (n - len(Q))",
-            "\tL = ifft([p*q for p,q in zip(fft(P),fft(Q))])[2:m]",
+            "\tL = ifft([p*q for p,q in zip(fft(P),fft(Q))])[:m]",
             "\treturn [round(i.real) for i in L]"
         ],
         "description": "FFT implementation"
