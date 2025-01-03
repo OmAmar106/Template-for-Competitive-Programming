@@ -15,7 +15,7 @@
 	"cp": {
 		"prefix": "cp",
 		"body": [
-			"import sys,math,random",
+			"import sys,math,cmath,random",
             "from heapq import heappush,heappop",
             "from bisect import bisect_right,bisect_left",
             "from collections import Counter,deque,defaultdict",
@@ -39,7 +39,7 @@
             "#String hashing : sh/shclass, fenwick sortedlist : fsortl, Number : numtheory, SparseTable : SparseTable",
             "#bucket sorted list : bsortl, segment tree(lazy propogation) : SegmentTree,Other, bootstrap : bootstrap",
             "#binary indexed tree : BIT, segment tree(point updates) : SegmentPoint, Convex Hull : hull, Trie/Treap : Tries", 
-            "#Combinatorics : pnc, Diophantine Equations : dpheq, Graphs : graphs, DSU : DSU, Geometry: Geometry",
+            "#Combinatorics : pnc, Diophantine Equations : dpheq, Graphs : graphs, DSU : DSU, Geometry: Geometry, FFT: fft",
             "#Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "# input_file = open(r'input.txt', 'r');sys.stdin = input_file",
             "",
@@ -56,7 +56,7 @@
     "tcp": {
 		"prefix": "tcp",
 		"body": [
-			"import sys,math,random",
+			"import sys,math,cmath,random",
             "from heapq import heappush,heappop",
             "from bisect import bisect_right,bisect_left",
             "from collections import Counter,deque,defaultdict",
@@ -80,7 +80,7 @@
             "#String hashing : sh/shclass, fenwick sortedlist : fsortl, Number : numtheory, SparseTable : SparseTable",
             "#bucket sorted list : bsortl, segment tree(lazy propogation) : SegmentTree,Other, bootstrap : bootstrap",
             "#binary indexed tree : BIT, segment tree(point updates) : SegmentPoint, Convex Hull : hull, Trie/Treap : Tries", 
-            "#Combinatorics : pnc, Diophantine Equations : dpheq, Graphs : graphs, DSU : DSU, Geometry: Geometry",
+            "#Combinatorics : pnc, Diophantine Equations : dpheq, Graphs : graphs, DSU : DSU, Geometry: Geometry, FFT: fft",
             "#Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "# input_file = open(r'input.txt', 'r');sys.stdin = input_file",
             "",
@@ -1666,5 +1666,43 @@
             "\t\tdel current_dict[\"_end_\"]"
         ],
         "description": "Tries implementation"
+    },
+    "FFT": {
+        "prefix": "fft",
+        "body": [
+            "rt = [1]",
+            "def fft(P):",
+            "\tn = len(P)",
+            "\twhile 2 * len(rt) < n:",
+            "\t\troot = cmath.exp(2j * cmath.pi / (4 * len(rt)))",
+            "\t\trt.extend([r * root for r in rt])",
+            "\tk = n",
+            "\twhile k > 1:",
+            "\t\tfor i in range(n//k):",
+            "\t\t\tr = rt[i]",
+            "\t\t\tfor j1 in range(i*k, i*k + k//2):",
+            "\t\t\t\tj2 = j1 + k//2",
+            "\t\t\t\tz = r * P[j2]",
+            "\t\t\t\tP[j2] = P[j1] - z",
+            "\t\t\t\tP[j1] = P[j1] + z",
+            "\t\tk //= 2",
+            "\trev = [0]",
+            "\tfor i in range(1, n):",
+            "\t\trev.append(rev[i // 2] // 2 + (i & 1) * n // 2)",
+            "\treturn [(P[r]) for r in rev]",
+            "",
+            "def ifft(P):",
+            "\tn = len(P)",
+            "\treturn fft([P[-i]/n for i in range(n)])",
+            "",
+            "def fft_conv(P, Q):",
+            "\tm = len(P) + len(Q) - 1",
+            "\tn = 1 << m.bit_length()",
+            "\tP = P + [0] * (n - len(P))",
+            "\tQ = Q + [0] * (n - len(Q))",
+            "\tL = ifft([p*q for p,q in zip(fft(P),fft(Q))])[2:m]",
+            "\treturn [round(i.real) for i in L]"
+        ],
+        "description": "FFT implementation"
     }
 }
