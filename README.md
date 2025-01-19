@@ -17,6 +17,12 @@ The repository includes the following code snippets:
 - **GCD (Greatest Common Divisor)**: Function for computing the greatest common divisor of two numbers.
 - **LCM (Least Common Multiple)**: Function for computing the least common multiple of two numbers.
 - **Hashing**: General hashing techniques for various use cases and few more stuff.
+- **Convex Hull**: Convex Hull with dynamic programming optimization
+- **pnc**: Template for Permutation and combination
+- **Graphs**: Snippets for Graphs
+- **DSU**: DisjointSetUnion
+- **fft**: Fast Fourier Transform
+and many more snippets
 
 ## In Progress
 
