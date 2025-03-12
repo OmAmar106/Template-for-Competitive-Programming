@@ -21,88 +21,56 @@ def code_to_json_class(class_name, code):
     return json.dumps(json_structure, indent=4)
 
 tobeconverted = """
-class PersistentSegmentTree:
-
-    class Node:
-        def __init__(self, value=0, left=None, right=None):
-            self.value = value
-            self.left = left
-            self.right = right
-            
-    @staticmethod
-    def func(a, b):
-        return a+b
-    def __init__(self, data):
-        self.n = len(data)
-        self.versions = []
-        self.versions.append(self._build(data))
-    def _build(self, data):
-        stack = [(0, self.n - 1, False)]
-        nodes = {}
-        while stack:
-            left, right, visited = stack.pop()
-            if left == right:
-                nodes[(left, right)] = self.Node(data[left])
-            else:
-                if visited:
-                    mid = (left + right) // 2
-                    left_child = nodes[(left, mid)]
-                    right_child = nodes[(mid + 1, right)]
-                    nodes[(left, right)] = self.Node(self.func(left_child.value,right_child.value),left_child, right_child)
-                else:
-                    stack.append((left, right, True))
-                    mid = (left + right) // 2
-                    stack.append((mid + 1, right, False))
-                    stack.append((left, mid, False))
-        return nodes[(0, self.n - 1)]
-    
-    def update(self, version, pos, value):
-        old_root = self.versions[version]
-        stack, path = [(old_root, 0, self.n - 1)], []
-        while stack:
-            node, left, right = stack.pop()
-            path.append((node, left, right))
-            if left == right:
-                break
-            mid = (left + right) // 2
-            if pos <= mid:
-                stack.append((node.left, left, mid))
-            else:
-                stack.append((node.right, mid + 1, right))
-        
-        new_nodes = {}
-        for node, left, right in reversed(path):
-            if left == right:
-                k = value
-                # k = self.func(node.value,value) # if i want to update
-                new_nodes[(left, right)] = self.Node(k)
-            else:
-                mid = (left + right) // 2
-                left_child = new_nodes.get((left, mid), node.left)
-                right_child = new_nodes.get((mid + 1, right), node.right)
-                new_nodes[(left, right)] = self.Node(self.func(left_child.value,right_child.value),left_child, right_child)
-        return new_nodes[(0, self.n - 1)]
-
-    def create_version(self, version, pos, value):
-        new_root = self.update(version, pos, value)
-        self.versions.append(new_root)
-        return len(self.versions) - 1
-
-    def query(self, version, ql, qr):
-        node, left, right = self.versions[version], 0, self.n - 1
-        stack = [(node, left, right)]
-        result = 0 # change this depending on the problem
-        while stack:
-            node, left, right = stack.pop()
-            if ql > right or qr < left:
+def bfsf(graph,start=0):
+    bfs = [start]
+    visited = [False]*(len(graph))
+    visited[start] = True
+    for u in bfs:
+        for j in graph[u]:
+            if visited[j]:
                 continue
-            if ql <= left and right <= qr:
-                result = self.func(result,node.value)
-            else:
-                mid = (left + right) // 2
-                stack.append((node.left, left, mid))
-                stack.append((node.right, mid + 1, right))
-        return result
+            visited[j] = True
+            bfs.append(j)
+    return bfs
+
+def dijkstra(graph, start ,n):
+    dist, parents = [float("inf")] * n, [-1] * n
+    dist[start] = 0
+    queue = [(0, start)]
+    while queue:
+        path_len, v = heappop(queue)
+        if path_len == dist[v]:
+            for w, edge_len in graph[v]:
+                if edge_len + path_len < dist[w]:
+                    dist[w], parents[w] = edge_len + path_len, v
+                    heappush(queue, (edge_len + path_len, w))
+    return dist, parents
+
+def dfs(graph,start=0):
+    # I can also use this to replicate recursion
+    # without facing the overhead
+    n = len(graph)
+    visited = [False] * n
+    stack = [start]
+    while stack:
+        start = stack[-1]
+        # stack.pop() # use this if there is nothing after returning
+        if not visited[start]:
+            visited[start] = True
+            for child in graph[start]:
+                if not visited[child]:
+                    stack.append(child)
+        else:
+            stack.pop()
+            # dp[start] += 1
+            # for child in graph[start]:
+            #     if finished[child]:
+            #         dp[start] += dp[child]
+            # finished[start] = True
+            # remove else if you are doing nothing here
+            # add the stuff that you do post traversel here
+            # and add the finished array
+    return visited
 """
 
 json_output = code_to_json_class(input(),tobeconverted)
