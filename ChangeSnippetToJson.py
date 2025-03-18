@@ -21,56 +21,23 @@ def code_to_json_class(class_name, code):
     return json.dumps(json_structure, indent=4)
 
 tobeconverted = """
-def bfsf(graph,start=0):
-    bfs = [start]
-    visited = [False]*(len(graph))
-    visited[start] = True
-    for u in bfs:
-        for j in graph[u]:
-            if visited[j]:
-                continue
-            visited[j] = True
-            bfs.append(j)
-    return bfs
-
-def dijkstra(graph, start ,n):
-    dist, parents = [float("inf")] * n, [-1] * n
-    dist[start] = 0
-    queue = [(0, start)]
-    while queue:
-        path_len, v = heappop(queue)
-        if path_len == dist[v]:
-            for w, edge_len in graph[v]:
-                if edge_len + path_len < dist[w]:
-                    dist[w], parents[w] = edge_len + path_len, v
-                    heappush(queue, (edge_len + path_len, w))
-    return dist, parents
-
-def dfs(graph,start=0):
-    # I can also use this to replicate recursion
-    # without facing the overhead
-    n = len(graph)
-    visited = [False] * n
-    stack = [start]
+def dfs(graph):
+    starttime = [[0,0] for i in range(len(graph))]
+    time = 0
+    stack = [(0,-1,0)]
     while stack:
-        start = stack[-1]
-        # stack.pop() # use this if there is nothing after returning
-        if not visited[start]:
-            visited[start] = True
-            for child in graph[start]:
-                if not visited[child]:
-                    stack.append(child)
-        else:
-            stack.pop()
-            # dp[start] += 1
-            # for child in graph[start]:
-            #     if finished[child]:
-            #         dp[start] += dp[child]
-            # finished[start] = True
-            # remove else if you are doing nothing here
-            # add the stuff that you do post traversel here
-            # and add the finished array
-    return visited
+        cur, prev, state = stack.pop()
+        if state == 0:
+            starttime[cur][0] = time
+            time += 1
+            stack.append((cur, prev, 1))
+            for neighbor in graph[w(cur)]:
+                if neighbor == prev:
+                    continue
+                stack.append((neighbor, cur, 0))    
+        elif state == 1:
+            starttime[cur][1] = time
+    return starttime
 """
 
 json_output = code_to_json_class(input(),tobeconverted)
