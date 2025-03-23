@@ -21,23 +21,6 @@ def code_to_json_class(class_name, code):
     return json.dumps(json_structure, indent=4)
 
 tobeconverted = """
-def dfs(graph):
-    starttime = [[0,0] for i in range(len(graph))]
-    time = 0
-    stack = [(0,-1,0)]
-    while stack:
-        cur, prev, state = stack.pop()
-        if state == 0:
-            starttime[cur][0] = time
-            time += 1
-            stack.append((cur, prev, 1))
-            for neighbor in graph[w(cur)]:
-                if neighbor == prev:
-                    continue
-                stack.append((neighbor, cur, 0))    
-        elif state == 1:
-            starttime[cur][1] = time
-    return starttime
 """
 
 json_output = code_to_json_class(input(),tobeconverted)
