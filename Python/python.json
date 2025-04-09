@@ -2223,7 +2223,9 @@
             "\tdef get(self,key,other):",
             "\t\treturn self.d.get(w(key),other)",
             "\tdef __contains__(self,key):",
-            "\t\treturn w(key) in self.d"
+            "\t\treturn w(key) in self.d",
+	    "\tdef clear(self):",
+	    "\t\tself.d.clear()"
         ],
         "description": "xdict implementation"
     }
