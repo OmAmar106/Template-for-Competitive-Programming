@@ -1020,7 +1020,15 @@
             "\t\t\t\tmax_val = self.func(max_val, self.tree[right])",
             "\t\t\tleft //= 2",
             "\t\t\tright //= 2",
-            "\t\treturn max_val"
+            "\t\treturn max_val",
+            "\tdef __repr__(self):",
+            "\t\tprint('Seg[',end='')",
+            "\t\tfor i in range(self.n):",
+            "\t\t\tif i!=self.n-1:",
+            "\t\t\t\tprint(self.query(i,i+1),end=', ')",
+            "\t\t\telse:",
+            "\t\t\t\tprint(self.query(i,i+1),end=']')",
+            "\t\tprint()"
         ],
         "description": "Segment Tree implementation better for point updates and range queries"
     },
@@ -2224,8 +2232,12 @@
             "\t\treturn self.d.get(w(key),other)",
             "\tdef __contains__(self,key):",
             "\t\treturn w(key) in self.d",
-	    "\tdef clear(self):",
-	    "\t\tself.d.clear()"
+            "\tdef __len__(self):",
+            "\t\treturn len(self.d)",
+            "\tdef clear(self):",
+            "\t\tself.d.clear()",
+            "\tdef __iter__(self):",
+            "\t\treturn iter(self.keys())"
         ],
         "description": "xdict implementation"
     }
