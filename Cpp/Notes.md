@@ -7,4 +7,6 @@
 5. if you iterate , to access the variable use .first, .second
 6. If more than that, use get<num>(tuple)
 7. To sort using a custom function, add a third parameter [](const auto& a,const auto& b){return get<2>(a)<get<2>(b)>}
+8. To initialize a 2-D vector with all zeroes, use vector<vector<int>> dp(n,vector<int>(m,0)); 
+
 n. Be happy with your faster code :) 
