@@ -1,4 +1,6 @@
 import json
+import subprocess
+
 def replace_spaces_with_tabs(code, spaces_per_tab=4):
     lines = code.split('\n')
     converted_lines = []
@@ -8,6 +10,7 @@ def replace_spaces_with_tabs(code, spaces_per_tab=4):
             converted_line = converted_line.replace(' ' * spaces_per_tab, '\t')
         converted_lines.append(converted_line)
     return '\n'.join(converted_lines)
+
 def code_to_json_class(class_name, code):
     formatted_code = replace_spaces_with_tabs(code)
     lines = [line.rstrip() for line in formatted_code.strip().split('\n')]
@@ -23,5 +26,11 @@ def code_to_json_class(class_name, code):
 tobeconverted = """
 """
 
-json_output = code_to_json_class(input(),tobeconverted)
+s = input("Enter The Name : ")
+json_output = code_to_json_class(s,tobeconverted)
 print(json_output) 
+
+s = json_output[1:-1]
+subprocess.run("clip", text=True, input=s)
+
+print("Copied Succesfully.")
