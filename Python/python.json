@@ -91,7 +91,7 @@
             "#Combinatorics: pnc, Diophantine Equations: dpheq, DSU: DSU, Geometry: Geometry, FFT: fft, XOR_dict: xdict",
             "#Persistent Segment Tree: perseg, Binary Trie: b_trie, HLD: hld, String funcs: sf, Segment Tree(lp): SegmentOther",
             "#Graph1(dnc,bl): graphadv, Graph2(khn,sat): 2sat, Graph3(fltn,bprt): graphflatten, Graph4(ep,tp,fw,bmf): graphother",
-            "#Graph5(djik,bfs,dfs): graph, Graph6(dfsin): dfsin, utils: utils",
+            "#Graph5(djik,bfs,dfs): graph, Graph6(dfsin): dfsin, utils: utils, Persistent DSU: perdsu",
             "#Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "# input_file = open(r'input.txt', 'r');sys.stdin = input_file",
             "",
@@ -184,7 +184,7 @@
             "#Combinatorics: pnc, Diophantine Equations: dpheq, DSU: DSU, Geometry: Geometry, FFT: fft, XOR_dict: xdict",
             "#Persistent Segment Tree: perseg, Binary Trie: b_trie, HLD: hld, String funcs: sf, Segment Tree(lp): SegmentOther",
             "#Graph1(dnc,bl): graphadv, Graph2(khn,sat): 2sat, Graph3(fltn,bprt): graphflatten, Graph4(ep,tp,fw,bmf): graphother",
-            "#Graph5(djik,bfs,dfs): graph, Graph6(dfsin): dfsin, utils: utils",
+            "#Graph5(djik,bfs,dfs): graph, Graph6(dfsin): dfsin, utils: utils, Persistent DSU: perdsu",
             "#Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "# input_file = open(r'input.txt', 'r');sys.stdin = input_file",
             "",
@@ -2387,6 +2387,7 @@
             "\t\t\td[u+sub].append((v+sub,w))",
             "\t\t\tif not dirs:",
             "\t\t\t\td[v+sub].append((u+sub,w))",
+            "\treturn d",
             "",
             "ordalp = lambda s : ord(s)-65 if s.isupper() else ord(s)-97",
             "alp = lambda x : chr(97+x)",
@@ -2401,5 +2402,35 @@
             "ldir = {'D':(1,0),'U':(-1,0),'R':(0,1),'L':(0,-1)}"
         ],
         "description": "utils implementation"
+    },
+    "perdsu": {
+        "prefix": "perdsu",
+        "body": [
+            "class PersistentDSU:",
+            "\tdef __init__(self,n):",
+            "\t\tself.parent = list(range(n))",
+            "\t\tself.size = [1]*n",
+            "\t\tself.time = [float('inf')]*n",
+            "\tdef find(self,node,version):",
+            "\t\t# returns root at given version",
+            "\t\twhile not (self.parent[node]==node or self.time[node]>version):",
+            "\t\t\tnode = self.parent[node]",
+            "\t\treturn node",
+            "\tdef union(self,a,b,time):",
+            "\t\t# merges a and b",
+            "\t\ta = self.find(a,time)",
+            "\t\tb = self.find(b,time)",
+            "\t\tif a==b:",
+            "\t\t\treturn False",
+            "\t\tif self.size[a]>self.size[b]:",
+            "\t\t\ta,b = b,a",
+            "\t\tself.parent[a] = b",
+            "\t\tself.time[a] = time",
+            "\t\tself.size[b] += self.size[a]",
+            "\t\treturn True",
+            "\tdef isconnected(self,a,b,time):",
+            "\t\treturn self.find(a,time)==self.find(b,time)"
+        ],
+        "description": "perdsu implementation"
     }
 }
