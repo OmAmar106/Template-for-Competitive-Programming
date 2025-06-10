@@ -12,69 +12,72 @@ This repository contains a collection of Python,CPP code snippets and templates,
 
 ## Current Contents
 
-The repository includes the following code snippets in the python version:
+- **Python**:
+    The repository includes the following code snippets in the python version:
 
-- **CP**: FastIO, with solve function for multiple test cases.
-- **TCP**: CP Snippet for a single testcase, particularly for Atcoder Problems.
-- **String Hashing(shclass)**: String Hashing.
-- **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
-- **Number Theory 1(numtheory)**: 
-    - **miller_isprime**: Calculates if a number is prime or not in 7log2n, better for bigger numbers.
-    - **is_prime**: Checks if number if prime or not in root n.
-    - **sieve**: Precomputes primes upto the given number.
-    - **all_fact**: Returns a sorted list of all factors of the given number in root n.
-    - **prime_factors**: Returns the prime factors in the form of a Counter in log n.
-    - **all_factors**: Returns all factors of a number in log n + (num of fact) complexity.
-- **Number Theory 2(numrare)**:
-    - **pollard_rho**: Returns a random factor of n.
-    - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
-    - **matmul**: Matrix Multiplication
-    - **matpow**: Power of a matrix
-    - **extended_gcd**: Extended GCD.
-    - **composite_crt**: Chinese Remainder Theorem.
-    - **phi**: Computes Phi(n) for all n.
-- **Sparse Table**: Sparse Table.
-- **Bucket Sorted List(bsortl)**: Bucket based sorted list.
-- **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
-- **SegmentTree(SegmentOther)**: Lazy Propogated Segment Tree for all operations.
-- **bootstrap**: Code snippet to make recursion possible in python.
-- **tries**: Tries
-- **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
-- **Segment Tree(Segment Point)**: Segment Tree with point updates.
-- **Convex Hull(hull)**: Convex Hull, with two different implementations.
-- **BitArray**: Bitarray.
-- **Combinatorics(pnc)**: Combinatorics.
-- **Diophantine Equation(dpheq)**: Solving Linear Equation.
-- **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
-- **Geometry**: All Geometry formulas.
-- **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
-- **XOR_dict**: Dictionary Having inbuilt hashing.
-- **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
-- **Binary Trie(b_trie)**: Trie with each node having two children, faster.
-- **Heavy Light Decomposition(hld)**: Segment Tree Based Implementation.
-- **String Functions(sf)**: Only Z-function for now.
-- **Graph 1(graphadv)**:
-    - **Dinic**: Max Flow Problem.
-    - **Binary Lifting**: Binary Lifting.
-- **Graph 2(2sat)**:
-    - **2-SAT**: 2 Sat implementation.
-    - **Khan's Algorithm**: Topological Sorting.
-- **Graph 3(graphflattern)**:
-    - **Flattening of Tree**: Flattens tree using DFS.
-    - **Bipartite Graph**: Bipartite Graph.
-- **Graph 4(graphoth)**:
-    - **Euler's Path**: Euler's Path.
-    - **Topological Sorting**: Better Topological Sorting.
-    - **Floyd Warshall**: All Pairs shortest distance.
-    - **Bellman Ford**: Single to All.
-- **Graph 5(graph)**:
-    - **Djikstra**: Djikstra.
-    - **Breadth First Search**: BFS.
-    - **Depth First Seatch**: DFS.
-- **Graph6(dfsin)**: DFS within the main.
-- **utils**: Smaller Less relevant function and other constants and graph input.
-- **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
-- **Merge Sort Tree(sorttree)**: Merge Sort Tree.
+    - **CP**: FastIO, with solve function for multiple test cases.
+    - **TCP**: CP Snippet for a single testcase, particularly for Atcoder Problems.
+    - **String Hashing(shclass)**: String Hashing.
+    - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
+    - **Number Theory 1(numtheory)**: 
+        - **miller_isprime**: Calculates if a number is prime or not in 7log2n, better for bigger numbers.
+        - **is_prime**: Checks if number if prime or not in root n.
+        - **sieve**: Precomputes primes upto the given number.
+        - **all_fact**: Returns a sorted list of all factors of the given number in root n.
+        - **prime_factors**: Returns the prime factors in the form of a Counter in log n.
+        - **all_factors**: Returns all factors of a number in log n + (num of fact) complexity.
+    - **Number Theory 2(numrare)**:
+        - **pollard_rho**: Returns a random factor of n.
+        - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
+        - **matmul**: Matrix Multiplication
+        - **matpow**: Power of a matrix
+        - **extended_gcd**: Extended GCD.
+        - **composite_crt**: Chinese Remainder Theorem.
+        - **phi**: Computes Phi(n) for all n.
+    - **Sparse Table**: Sparse Table.
+    - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
+    - **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
+    - **SegmentTree(SegmentOther)**: Lazy Propogated Segment Tree for all operations.
+    - **bootstrap**: Code snippet to make recursion possible in python.
+    - **tries**: Tries
+    - **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
+    - **Segment Tree(Segment Point)**: Segment Tree with point updates.
+    - **Convex Hull(hull)**: Convex Hull, with two different implementations.
+    - **BitArray**: Bitarray.
+    - **Combinatorics(pnc)**: Combinatorics.
+    - **Diophantine Equation(dpheq)**: Solving Linear Equation.
+    - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
+    - **Geometry**: All Geometry formulas.
+    - **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
+    - **XOR_dict**: Dictionary Having inbuilt hashing.
+    - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
+    - **Binary Trie(b_trie)**: Trie with each node having two children, faster.
+    - **Heavy Light Decomposition(hld)**: Segment Tree Based Implementation.
+    - **String Functions(sf)**:
+        - **Z-function**: Longest Prefix Matching.
+        - **Manacher's Algorithm**: Longest Palindrome.
+    - **Graph 1(graphadv)**:
+        - **Dinic**: Max Flow Problem.
+        - **Binary Lifting**: Binary Lifting.
+    - **Graph 2(2sat)**:
+        - **2-SAT**: 2 Sat implementation.
+        - **Khan's Algorithm**: Topological Sorting.
+    - **Graph 3(graphflattern)**:
+        - **Flattening of Tree**: Flattens tree using DFS.
+        - **Bipartite Graph**: Bipartite Graph.
+    - **Graph 4(graphoth)**:
+        - **Euler's Path**: Euler's Path.
+        - **Topological Sorting**: Better Topological Sorting.
+        - **Floyd Warshall**: All Pairs shortest distance.
+        - **Bellman Ford**: Single to All.
+    - **Graph 5(graph)**:
+        - **Djikstra**: Djikstra.
+        - **Breadth First Search**: BFS.
+        - **Depth First Seatch**: DFS.
+    - **Graph6(dfsin)**: DFS within the main.
+    - **utils**: Smaller Less relevant function and other constants and graph input.
+    - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
+    - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
 
 ## In Progress
 
