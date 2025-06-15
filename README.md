@@ -78,6 +78,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
+    - **2-D Binary Indexed Tree(2DBIT)**: 2- Dimensional Binary Indexed Tree.
 
 ## In Progress
 
