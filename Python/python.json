@@ -765,7 +765,7 @@
             "\tdef __repr__(self):",
             "\t\treturn \"LazySegmentTree({0})\".format(self.data)"
         ],
-        "description": "Segment Tree implementation with lazy propagation in which returned is one of the input"
+        "description": "Segment Tree implementation with lazy propagation in which function is assosciative"
     },
     "SegmentOther": {
         "prefix": "segmentother",
@@ -1147,13 +1147,8 @@
             "\t\t\tright //= 2",
             "\t\treturn max_val",
             "\tdef __repr__(self):",
-            "\t\tprint('Seg[',end='')",
-            "\t\tfor i in range(self.n):",
-            "\t\t\tif i!=self.n-1:",
-            "\t\t\t\tprint(self.query(i,i+1),end=', ')",
-            "\t\t\telse:",
-            "\t\t\t\tprint(self.query(i,i+1),end=']')",
-            "\t\tprint()"
+            "\t\tvalues = [str(self.query(i, i + 1)) for i in range(self.n)]",
+            "\t\treturn f'Seg[{', '.join(values)}]'"
         ],
         "description": "Segment Tree implementation better for point updates and range queries"
     },
