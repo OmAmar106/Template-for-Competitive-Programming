@@ -15,7 +15,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
 - **Python**:
     The repository includes the following code snippets in the python version:
 
-    - **CP**: FastIO, with solve function for multiple test cases.
+    - **CP**: FastIO, with solve function for multiple test cases, with hashing, gcd and lcm snippet.
     - **TCP**: CP Snippet for a single testcase, particularly for Atcoder Problems.
     - **String Hashing(shclass)**: String Hashing.
     - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
@@ -79,6 +79,40 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
     - **2-D Binary Indexed Tree(2DBIT)**: 2- Dimensional Binary Indexed Tree.
+    - **Mono Deque**: Monotonic Deque, gives the cumulative assosciative function value of the elements within the deque in amortized O(1).
+
+- **CPP**:
+    The repository includes the following code snippets in the CPP version:
+
+    - **CP**: FastIO, with solve function for multiple test cases, with hashing, gcd, lcm, pbds snippet.
+    - **String Hashing(shclass)**: String Hashing.
+    - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
+    - **Number Theory(numtheory)**: 
+        - **matmul**: Matrix Multiplication
+        - **matpow**: Power of a matrix
+        - **mod_exp**
+        - **sieve**
+        - **isprime**
+        - **all_factors**
+        - **sieve_unique**
+        - **prime_factors**
+        - **mod_inverse**
+    - **Sparse Table**: Sparse Table.
+    - **Sorted List(sortl)**: sorted list using ordered multiset.
+    - **SegmentTree**: Lazy Propogated Segment Tree for all operations.
+    - **tries**: Tries
+    - **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
+    - **Segment Tree(Segment Point)**: Segment Tree with point updates.
+    - **Convex Hull(hull)**: Convex Hull, with two different implementations.
+    - **Combinatorics(pnc)**: Combinatorics.
+    - **Diophantine Equation(dpheq)**: Solving Linear Equation.
+    - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
+    - **Geometry**: All Geometry formulas.
+    - **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
+    - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
+    - **Graph 1 (graphs)**
+    - **Graph 2 (bgraph)**
+    - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
 
 ## In Progress
 
