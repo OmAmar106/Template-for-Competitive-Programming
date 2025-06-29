@@ -1956,7 +1956,7 @@
         ],
         "description": "hld implementation"
     },
-    "BitArray": {
+    "Bitarray": {
         "prefix": "bitarray",
         "body": [
             "class BitSet:",
@@ -2054,14 +2054,45 @@
             "\t\t\tyield i",
             "\tdef __len__(self):",
             "\t\treturn self.sz",
+            "\tdef __or__(self, other):",
+            "\t\tif self.sz != other.sz:",
+            "\t\t\traise ValueError(\"BitSets must be of equal size\")",
+            "\t\tres = BitSet(self.sz)",
+            "\t\tres.words = [a | b for a, b in zip(self.words, other.words)]",
+            "\t\treturn res",
+            "\tdef __add__(self, other):",
+            "\t\tif self.sz != other.sz:",
+            "\t\t\traise ValueError(\"BitSets must be of equal size\")",
+            "\t\tres = BitSet(self.sz)",
+            "\t\tcarry = 0",
+            "\t\tfor i in range(len(self.words)):",
+            "\t\t\ttotal = self.words[i] + other.words[i] + carry",
+            "\t\t\tres.words[i] = total & BitSet.WORD_MASK",
+            "\t\t\tcarry = total >> BitSet.BITS_PER_WORD",
+            "\t\treturn res",
+            "\tdef __and__(self, other):",
+            "\t\tif self.sz != other.sz:",
+            "\t\t\traise ValueError(\"BitSets must be of equal size\")",
+            "\t\tres = BitSet(self.sz)",
+            "\t\tres.words = [a & b for a, b in zip(self.words, other.words)]",
+            "\t\treturn res",
+            "\tdef __xor__(self, other):",
+            "\t\tif self.sz != other.sz:",
+            "\t\t\traise ValueError(\"BitSets must be of equal size\")",
+            "\t\tres = BitSet(self.sz)",
+            "\t\tres.words = [a ^ b for a, b in zip(self.words, other.words)]",
+            "\t\treturn res",
+            "\tdef __invert__(self):",
+            "\t\tres = BitSet(self.sz)",
+            "\t\tres.words = [~a & BitSet.WORD_MASK for a in self.words]",
+            "\t\treturn res",
             "\tdef add(self, val):",
             "\t\tself.flip_range(val, self.nextClearBit(val))",
             "\tdef rem(self, val):",
             "\t\tself.flip_range(val, self.nextSetBit(val))"
         ],
-        "description": "BitArray implementation"
-    },
-    
+        "description": "Bitarray implementation"
+    },    
     "graphadv": {
         "prefix": "graphadv",
         "body": [
