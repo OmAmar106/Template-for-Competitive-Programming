@@ -42,7 +42,10 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **tries**: Tries
     - **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
     - **Segment Tree(Segment Point)**: Segment Tree with point updates.
-    - **Convex Hull(hull)**: Convex Hull, with two different implementations.
+    - **Convex Hull(hull)**: Convex Hull, with three different implementations.
+        - **First**: Need to define the max values of ai, bi (N).
+        - **Second**: Need to define range of operations (log N).
+        - **Third**: Need to define number of lines.
     - **BitArray**: Bitarray.
     - **Combinatorics(pnc)**: Combinatorics.
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
