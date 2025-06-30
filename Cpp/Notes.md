@@ -14,5 +14,6 @@
 12. Use emplace_back rather than push_back to push complicated structures.
 13. print will work the same way in python now.
 14. Multiset can be used in many place, but OrderedMultiSet is better personally.
+15. Min Heap: priority_queue<pi,vector<pi>,greater<pi>> pq;
 
 n. Be happy with your faster code :) 

@@ -38,6 +38,8 @@
             "using vi = vector<int>;",
             "using vii = vector<vector<int>>;",
             "using pi = pair<int,int>;",
+            "#pragma GCC optimize(\"O3,unroll-loops\")",
+            "#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
             "",
             "template <typename T>",
             "using ordered_multiset = tree<",
