@@ -29,11 +29,14 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Number Theory 2(numrare)**:
         - **pollard_rho**: Returns a random factor of n.
         - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
-        - **matmul**: Matrix Multiplication
-        - **matpow**: Power of a matrix
         - **extended_gcd**: Extended GCD.
         - **composite_crt**: Chinese Remainder Theorem.
         - **phi**: Computes Phi(n) for all n.
+    - **Number Theory 3(nummat)**:
+        - **Transpose**: Transpose
+        - **matmul**: Matrix Multiplication
+        - **matpow**: Power of a matrix
+        - **gauss**: Solves Linear Equations
     - **Sparse Table**: Sparse Table.
     - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
     - **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
