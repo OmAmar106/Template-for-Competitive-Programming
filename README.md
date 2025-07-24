@@ -62,6 +62,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **String Functions(sf)**:
         - **Z-function**: Longest Prefix Matching.
         - **Manacher's Algorithm**: Longest Palindrome.
+        - **Suffix Array**: Suffix Array.
+        - **LCP**: Longest common prefix between adjacent.
     - **Graph 1(graphadv)**:
         - **Dinic**: Max Flow Problem.
         - **Binary Lifting**: Binary Lifting.
