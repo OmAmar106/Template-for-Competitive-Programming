@@ -89,6 +89,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **2-D Binary Indexed Tree(2DBIT)**: 2- Dimensional Binary Indexed Tree.
     - **Mono Deque**: Monotonic Deque, gives the cumulative assosciative function value of the elements within the deque in amortized O(1).
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
+    - **Linear Algebra**:
+        - **Max Xor**: Returns array of elements such that their XOR is maximized.
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
