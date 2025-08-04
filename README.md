@@ -91,6 +91,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
     - **Linear Algebra**:
         - **Max Xor**: Returns array of elements such that their XOR is maximized.
+    - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
