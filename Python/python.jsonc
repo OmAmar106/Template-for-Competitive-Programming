@@ -2189,8 +2189,7 @@
             "\t\tself.flip_range(val, self.nextSetBit(val))"
         ],
         "description": "Bitarray implementation"
-    },
-    "graphadv": {
+    },"graphadv": {
         "prefix": "graphadv",
         "body": [
             "INF = float(\"inf\")",
@@ -2241,13 +2240,13 @@
             "def build_virtual_tree(subset, lift):",
             "\tdepth = lift.depth",
             "\tlca = lift.lca",
-            "\tnodes = list(set(subset))",
-            "\tnodes.sort(key=lambda x: lift.depth[x])",
+            "\tnodes = subset",
+            "\tnodes.sort(key=lambda x: depth[x])",
             "\textnd = nodes[:]",
             "\tfor i in range(len(nodes) - 1):",
             "\t\textnd.append(lca(nodes[i], nodes[i + 1]))",
             "\textnd = list(set(extnd))",
-            "\textnd.sort(key=lambda x: lift.depth[x])",
+            "\textnd.sort(key=lambda x: depth[x])",
             "\tvirtual_tree = {u: [] for u in extnd}",
             "\tstack = []",
             "\tdef is_ancestor(u, v):",
