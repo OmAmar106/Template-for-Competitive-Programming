@@ -67,6 +67,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 1(graphadv)**:
         - **Dinic**: Max Flow Problem.
         - **Binary Lifting**: Binary Lifting.
+        - **Virtual Tree**: Build a Virtual Tree
     - **Graph 2(2sat)**:
         - **2-SAT**: 2 Sat implementation.
         - **Khan's Algorithm**: Topological Sorting.
