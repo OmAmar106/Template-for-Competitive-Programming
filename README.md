@@ -84,6 +84,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Breadth First Search**: BFS.
         - **Depth First Seatch**: DFS.
     - **Graph6(dfsin)**: DFS within the main.
+    - **Graph7(bridges)**:
+        - **Bridges**: Finds all the bridges in the graph.
+        - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
