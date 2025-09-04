@@ -70,6 +70,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Virtual Tree**: Auxillary/Virtual Tree
     - **Graph 2(2sat)**:
         - **2-SAT**: 2 Sat implementation.
+        - **Strongly Connected Component**: Finds the different SCCs.
         - **Khan's Algorithm**: Topological Sorting.
     - **Graph 3(graphflattern)**:
         - **Flattening of Tree**: Flattens tree using DFS.
