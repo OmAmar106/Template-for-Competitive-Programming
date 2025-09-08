@@ -3309,7 +3309,19 @@
             "\tfor i in range(n):",
             "\t\tif parent[i] == -1:",
             "\t\t\tdfs(i)",
-            "\treturn articulation, bridge"
+            "\treturn articulation, bridge",
+            "",
+            "def find_2ecc(edges,d):",
+            "\t# returns a new graph, in which two nodes are connected",
+            "\t# if and only if they are part of same cycle.",
+            "\t_,bridges = lowlink(d)",
+            "\tnewd = [[] for i in range(len(d))]",
+            "\tbridges = set((w(i[0]),w(i[1])) for i in bridges)",
+            "\tfor u,v in edges:",
+            "\t\tif (w(u),w(v)) not in bridges and (w(v),w(u)) not in bridges:",
+            "\t\t\tnewd[u].append(v)",
+            "\t\t\tnewd[v].append(u)",
+            "\treturn newd"
         ],
         "description": "graph_dmgt implementation"
     }

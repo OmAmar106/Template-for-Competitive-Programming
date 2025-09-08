@@ -29,9 +29,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Number Theory 2(numrare)**:
         - **pollard_rho**: Returns a random factor of n.
         - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
-        - **extended_gcd**: Extended GCD.
-        - **composite_crt**: Chinese Remainder Theorem.
-        - **phi**: Computes Phi(n) for all n.
+        - **extended_gcd**: Extended GCD. **
+        - **composite_crt**: Chinese Remainder Theorem. **
+        - **phi**: Computes Phi(n) for all n. **
     - **Number Theory 3(nummat)**:
         - **Transpose**: Transpose
         - **matmul**: Matrix Multiplication
@@ -62,21 +62,21 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **String Functions(sf)**:
         - **Z-function**: Longest Prefix Matching.
         - **Manacher's Algorithm**: Longest Palindrome.
-        - **Suffix Array**: Suffix Array.
-        - **LCP**: Longest common prefix between adjacent.
+        - **Suffix Array**: Suffix Array. **
+        - **LCP**: Longest common prefix between adjacent elements in Suffix Array.
     - **Graph 1(graphadv)**:
-        - **Dinic**: Max Flow Problem.
+        - **Dinic**: Max Flow Problem. **
         - **Binary Lifting**: Binary Lifting.
-        - **Virtual Tree**: Auxillary/Virtual Tree
+        - **Virtual Tree**: Auxillary/Virtual Tree **
     - **Graph 2(2sat)**:
         - **2-SAT**: 2 Sat implementation.
-        - **Strongly Connected Component**: Finds the different SCCs.
+        - **Strongly Connected Component**: Finds the different SCCs. **
         - **Khan's Algorithm**: Topological Sorting.
     - **Graph 3(graphflattern)**:
         - **Flattening of Tree**: Flattens tree using DFS.
         - **Bipartite Graph**: Bipartite Graph.
     - **Graph 4(graphoth)**:
-        - **Euler's Path**: Euler's Path.
+        - **Euler's Path**: Euler's Path. **
         - **Topological Sorting**: Better Topological Sorting.
         - **Floyd Warshall**: All Pairs shortest distance.
         - **Bellman Ford**: Single to All.
@@ -88,7 +88,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph7(bridges)**: For undirected graphs
         - **Bridges**: Finds all the bridges in the graph.
         - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
-        - **lowlink**: Returns all the articulation points and bridges in iterative way.
+        - **lowlink**: Returns all the articulation points and bridges in iterative way. **
+        - **find_2ecc**: Returns the Two Edge Connected Component. **
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
@@ -131,6 +132,19 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 1 (graphs)**
     - **Graph 2 (bgraph)**
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
+
+## Definitions
+- **Extended GCD**: Computes x,y,gcd(a,b) such that ax+by=gcd(a,b).
+- **Chinese Remainder Theorem**: given a mod m and a mod m1, m and m1, it returns smallest possible value of a.
+- **Phi(n)**: Number of Integers less than n coprime with n
+- **Suffix Array**: Starting position of Suffixes sorted according to there lexographical value
+- **Max Flow Problems**: Max Flow that can go from start to end without exceeding capacity
+- **Auxillary/Virtual Tree**: Create a subtree given a set of edges, by adding all possible LCAs.
+- **SCC**: Connected Components, such that any vertex is reachable from any other vertex within the component.
+- **Euler's Path**: Visit every edges exactly once, start and end can be different.
+- **Bridges**: Edges which on removal increases number of components.
+- **Articulation Points**: Vertex which on removal increase number of components.
+- **2ECC**: Divides graph into subgraphs, where two elements within the same component share a cycle.
 
 ## In Progress
 
