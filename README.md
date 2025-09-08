@@ -88,7 +88,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph7(bridges)**: For undirected graphs
         - **Bridges**: Finds all the bridges in the graph.
         - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
-        - **Articulation_Points**: Returns all the articulation points.
+        - **lowlink**: Returns all the articulation points and bridges in iterative way.
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
