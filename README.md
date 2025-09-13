@@ -55,7 +55,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
     - **Geometry**: All Geometry formulas.
     - **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
-    - **XOR_dict**: Dictionary Having inbuilt hashing.
+    - **XOR_dict**: Dictionary Having inbuilt hashing, has Xdict and Xset.
     - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
     - **Binary Trie(b_trie)**: Trie with each node having two children, faster.
     - **Heavy Light Decomposition(hld)**: Segment Tree Based Implementation.
