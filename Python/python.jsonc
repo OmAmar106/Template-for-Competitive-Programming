@@ -3093,7 +3093,7 @@
     "linalg": {
         "prefix": "linalg",
         "body": [
-            "def max_xor(A):",
+            "def max_xor(A,flag=True):",
             "\tbase = []",
             "\thow = {}",
             "\treduced_base = {}",
@@ -3116,6 +3116,11 @@
             "\t\tif not x & (1 << j):",
             "\t\t\tx ^= reduced_base[j]",
             "\t\t\ttmp ^= how[j]",
+            "\tif flag:",
+            "\t\t# elements whose combination returns all possible",
+            "\t\t# subet xors",
+            "\t\treturn reduced_base",
+            "\t# elements whose xor is maximum",
             "\treturn [base[j] for j in range(len(base)) if tmp & (1 << j)]"
         ],
         "description": "linalg implementation"
