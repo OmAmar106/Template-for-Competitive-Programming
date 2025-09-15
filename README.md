@@ -99,6 +99,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Linear Algebra**:
         - **Max Xor**: Returns array of elements such that their XOR is maximized.
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
+    - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
