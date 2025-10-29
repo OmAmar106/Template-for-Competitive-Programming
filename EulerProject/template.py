@@ -1,4 +1,4 @@
-import sys,math,cmath,random,os
+import sys,math,cmath,random,os,time,psutil
 from heapq import heappush,heappop
 from bisect import bisect_right,bisect_left
 from collections import Counter,deque,defaultdict
@@ -6,6 +6,7 @@ from itertools import permutations,combinations
 from io import BytesIO, IOBase
 from decimal import Decimal,getcontext
 
+process = psutil.Process(os.getpid())
 BUFSIZE = 8192
 class FastIO(IOBase):
     newlines = 0
@@ -66,9 +67,19 @@ LII_1 = lambda : list(map(lambda x:int(x)-1, sys.stdin.readline().split()))
 LII_C = lambda x : list(map(x, sys.stdin.readline().split()))
 MATI = lambda x : [list(map(int, sys.stdin.readline().split())) for _ in range(x)]
 
-import sys
 sys.stdin = open(r'Project-Euler-Python/Codes/input.txt', 'r')
 sys.stdout = open(r'Project-Euler-Python/Codes/output.txt','w')
 sys.stderr = open(r'Project-Euler-Python/Codes/error.txt','w')
 
+start = time.time()
 
+def solve():    
+    
+    return
+
+solve()
+
+print("\n\n\n########## Stats ##########")
+print(f"Time Taken : {time.time()-start:.2f} s")
+mem = process.memory_info().rss / 1e6  # in MB
+print(f"Memory Used : {mem:.2f} MB")
