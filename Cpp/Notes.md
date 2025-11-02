@@ -6,7 +6,7 @@
 4. To store more two value, use pair for more than that use tuple
 5. if you iterate , to access the variable use .f, .s
 6. If more than that, use get<num>(tuple)
-7. To sort using a custom function, add a third parameter [](const auto& a,const auto& b){return get<2>(a)<get<2>(b)>}
+7. To sort using a custom function, add a third parameter [](const auto& a,const auto& b){return get<2>(a)<get<2>(b);}
 8. To initialize a 2-D vector with all zeroes, use vector<vector<int>> dp(n,vector<int>(m,0)); 
 9. Rather than heap, priority queue.
 10. pop does not return any value, first peek then pop.
