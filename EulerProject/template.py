@@ -67,19 +67,20 @@ LII_1 = lambda : list(map(lambda x:int(x)-1, sys.stdin.readline().split()))
 LII_C = lambda x : list(map(x, sys.stdin.readline().split()))
 MATI = lambda x : [list(map(int, sys.stdin.readline().split())) for _ in range(x)]
 
-sys.stdin = open(r'Project-Euler-Python/Codes/input.txt', 'r')
-sys.stdout = open(r'Project-Euler-Python/Codes/output.txt','w')
-sys.stderr = open(r'Project-Euler-Python/Codes/error.txt','w')
+base = os.path.dirname(os.path.abspath(__file__))
+sys.stdin  = open(os.path.join(base, "input.txt"), "r")
+sys.stdout = open(os.path.join(base, "output.txt"), "w")
+sys.stderr = open(os.path.join(base, "error.txt"), "w")
 
 start = time.time()
 
-def solve():    
-    
+def solve():
+
     return
 
 solve()
 
 print("\n\n\n########## Stats ##########")
 print(f"Time Taken : {time.time()-start:.2f} s")
-mem = process.memory_info().rss / 1e6  # in MB
+mem = process.memory_info().rss / 1e6
 print(f"Memory Used : {mem:.2f} MB")
