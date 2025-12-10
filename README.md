@@ -1,6 +1,6 @@
 # Competitive Programming Python Snippets
 
-This repository contains a collection of Python,CPP code snippets and templates, Hacking Test Case Generator, Stress Tester, and a code to json format converter designed to assist with competitive programming. These snippets cover a range of algorithms, data structures, and problem-solving techniques commonly used in competitive programming contests.
+This repository contains a collection of Python,CPP code snippets and templates, Hacking Test Case Generator, Stress Tester, and a code to json format converter designed to assist with competitive programming and a lot more. These snippets cover a range of algorithms, data structures, and problem-solving techniques commonly used in competitive programming contests. This repository will mostly benefit people who do CP in Python.
 
 ## Overview
 
@@ -9,6 +9,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
 - Code to json converter
 - Stress Tester
 - Hack Generator
+- Other Templates
 
 ## Current Contents
 

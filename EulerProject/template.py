@@ -5,6 +5,7 @@ from collections import Counter,deque,defaultdict
 from itertools import permutations,combinations
 from io import BytesIO, IOBase
 from decimal import Decimal,getcontext
+from scipy.optimize import linprog
 
 process = psutil.Process(os.getpid())
 BUFSIZE = 8192
