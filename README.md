@@ -84,8 +84,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Djikstra**: Djikstra.
         - **Breadth First Search**: BFS.
         - **Depth First Seatch**: DFS.
-    - **Graph6(dfsin)**: DFS within the main.
-    - **Graph7(bridges)**: For undirected graphs
+    - **Graph 6(dfsin)**: DFS within the main.
+    - **Graph 7(graph_dmgt)**: For undirected graphs
         - **Bridges**: Finds all the bridges in the graph.
         - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
         - **lowlink**: Returns all the articulation points and bridges in iterative way. **
@@ -98,6 +98,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
     - **Linear Algebra**:
         - **Max Xor**: Returns array of elements such that their XOR is maximized.
+        - **Simplex Bland**: Solves LPP Problems using Simplex Method.
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
     - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
 
@@ -149,7 +150,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
 
 ## In Progress
 
-- Additional algorithms and data structures will be added over time to expand the utility of the repository. Contributions and suggestions for new snippets are welcome.
+- Additional algorithms and data structures will be added over time to expand the utility of the repository. Issue Raising for new snippets are welcome.
 
 ## Usage
 
@@ -159,8 +160,14 @@ To integrate these snippets into Visual Studio Code:
 2. Navigate to the `python.json` file located in the AppData directory.
 3. Copy and paste the relevant snippets from this repository into the `python.json` file.
 
-## Contribution
+## Steps to Update
 
-Feel free to contribute by submitting pull requests with new snippets or improvements. Your contributions can help enhance the utility of this repository for the competitive programming community.
+1. Add snippet in ChangeSnippetToJson file.
+2. Generate Snippet.
+3. Remove snippet from the file.
+4. Update README.md with the new added function.
+5. Add the snippet to python.json.
+6. Copy the python.json file to python.jsonc.
+7. Push the file.
 
 Happy coding!
