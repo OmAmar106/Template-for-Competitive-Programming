@@ -1,0 +1,7 @@
+Generated Code Summary
+    ----------------------
+
+    Total files       : 17
+    Total size (bytes): 29815
+    Total lines       : 1246
+    Avg lines/file    : 73

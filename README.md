@@ -18,6 +18,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
 
     - **CP**: FastIO, with solve function for multiple test cases, with hashing, gcd and lcm snippet.
     - **TCP**: CP Snippet for a single testcase, particularly for Atcoder Problems.
+    - **DETCP**: CP Snippet with logs, and I/O from files.
     - **String Hashing(shclass)**: String Hashing.
     - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
     - **Number Theory 1(numtheory)**: 
@@ -64,6 +65,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Z-function**: Longest Prefix Matching.
         - **Manacher's Algorithm**: Longest Palindrome.
         - **Suffix Array**: Suffix Array. **
+            - **SuffArr**: O(N) theoretical complexity but slower
+            - **SuffArray**: O(NlogN) but faster, due to less constant time
         - **LCP**: Longest common prefix between adjacent elements in Suffix Array.
     - **Graph 1(graphadv)**:
         - **Dinic**: Max Flow Problem. **
@@ -135,6 +138,13 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 1 (graphs)**
     - **Graph 2 (bgraph)**
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
+
+## Note:
+Website to convert the .json format to appropriate codes: 
+https://json-to-zip-codes-converter.onrender.com/ (website might take some time to load)
+
+Github Repository of the same:
+https://github.com/OmAmar106/JSON-To-Zip-Codes-Converter
 
 ## Definitions
 - **Extended GCD**: Computes x,y,gcd(a,b) such that ax+by=gcd(a,b).
