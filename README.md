@@ -31,14 +31,21 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Number Theory 2(numrare)**:
         - **pollard_rho**: Returns a random factor of n.
         - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
+        - **Discrete Log**: returns smallest x such that pow(a,x,mod)=b
         - **extended_gcd**: Extended GCD. **
         - **composite_crt**: Chinese Remainder Theorem. **
         - **phi**: Computes Phi(n) for all n. **
     - **Number Theory 3(nummat)**:
-        - **Transpose**: Transpose
-        - **matmul**: Matrix Multiplication
-        - **matpow**: Power of a matrix
-        - **gauss**: Solves Linear Equations
+        - **Transpose**: Transpose.
+        - **matmul**: Matrix Multiplication.
+        - **matpow**: Power of a matrix.
+        - **gauss**: Solves Linear Equations.
+    - **Linear Algebra**:
+        - **solve_quadratic**: Solves ax2+bx+c=0 for integer roots.
+        - **solve_cubic**: Solves ax3+bx2+cx+d=0 for integer roots.
+        - **Max Xor**: Returns array of elements such that their XOR is maximized.
+        - **Simplex Bland**: Solves LPP Problems using Simplex Method.
+        - **s_lr**: Computer Summation of i**power for l<=i<=r, given power<=3
     - **Sparse Table**: Sparse Table.
     - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
     - **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
@@ -53,6 +60,15 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Third**: Need to define number of lines.
     - **BitArray**: Bitarray.
     - **Combinatorics(pnc)**: Combinatorics.
+        - **fac**: Factorial
+        - **fac_inv**: Inverse of Factorial
+        - **combi**: nCr
+        - **permu**: nPr
+        - **catalan**: (1/(n+1)) * (2nCn)
+        - **inv**: Inverse of n
+        - **derangements**: Number of permutations of n objects where no object appears in its original position
+        - **stirling_2**: Number of ways to partition n elements into k non-empty subsets
+        - **partition**: Ways to partition n into k or fewer parts of size 1 or greater
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
     - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
     - **Geometry**: All Geometry formulas.
@@ -100,9 +116,6 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **2-D Binary Indexed Tree(2DBIT)**: 2- Dimensional Binary Indexed Tree.
     - **Mono Deque**: Monotonic Deque, gives the cumulative assosciative function value of the elements within the deque in amortized O(1).
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
-    - **Linear Algebra**:
-        - **Max Xor**: Returns array of elements such that their XOR is maximized.
-        - **Simplex Bland**: Solves LPP Problems using Simplex Method.
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
     - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
 
