@@ -78,7 +78,9 @@ MATI = lambda x : [list(map(int, sys.stdin.readline().split())) for _ in range(x
 #2-D BIT: 2DBIT, MonoDeque: mono, nummat: matrix, SuffixAutomaton: sautomaton, linalg: linalg, SquareRtDecomp: sqrt
 #Grapth7(bridges): graph_dmgt, FWHT(^,|,&): fwht
 #Template : https://github.com/OmAmar106/Template-for-Competetive-Programming
-input_file = open(r'input.txt', 'r');sys.stdin = input_file;output_file = open(r'output.txt','w');sys.stdout = output_file
+input_file = open(r'input.txt', 'r');sys.stdin = input_file
+output_file = open(r'output.txt','w');sys.stdout = output_file
+error_file = open(r'error.txt','w');sys.stderr = error_file
 
 def solve(tc_no):
     n = II()

@@ -16,5 +16,10 @@
 14. Multiset can be used in many place, but OrderedMultiSet is better personally.
 15. Min Heap: priority_queue<pi,vector<pi>,greater<pi>> pq;
 16. int val = *max_element(L.begin(),L.end());
+17. Inline Function:
+    auto func_name = [](int a,int b){
+        return a*b;
+    };
+18. __builtin_popcount(m) : popcount of the number
 
 n. Be happy with your faster code :) 
