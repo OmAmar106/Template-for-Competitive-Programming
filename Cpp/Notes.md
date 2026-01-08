@@ -21,5 +21,6 @@
         return a*b;
     };
 18. __builtin_popcount(m) : popcount of the number
+19. bitset<const> bt; -> faster version of bitarray of python, considerably faster.
 
 n. Be happy with your faster code :) 

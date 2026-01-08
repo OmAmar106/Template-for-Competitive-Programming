@@ -148,8 +148,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Geometry**: All Geometry formulas.
     - **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
     - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
-    - **Graph 1 (graphs)**
-    - **Graph 2 (bgraph)**
+    - **Graph 1 (bgraph)**: DFS, BFS, Dijkstra
+    - **Graph 2 (graphoth)**: TopoSort
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
 
 ## Note:

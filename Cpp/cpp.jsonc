@@ -82,7 +82,7 @@
             "// Segment Tree(lazy propogation): SegmentTree, Merge Sort Tree: sorttree, Trie/Treap: Tries",
             "// binary indexed tree: BIT, Segment Tree(point updates): SegmentPoint, Convex Hull: hull",
             "// Combinatorics: pnc, Diophantine Equations: dpheq, Graphs: graphs, DSU: DSU, FFT: fft",
-            "// Persistent Segment Tree: perseg, FreqGraphs: bgraph",
+            "// Persistent Segment Tree: perseg, FreqGraphs: bgraph, GrapthOth: graphoth",
             "// Template : https://github.com/OmAmar106/Template-for-Competetive-Programming",
             "",
             "void solve() {",
@@ -1360,5 +1360,34 @@
             "};"
         ],
         "description": "sortl implementation"
+    },
+    "graphoth": {
+        "prefix": "graphoth",
+        "body": [
+            "vi toposort(vii graph){",
+            "\tvi res;",
+            "\tvi found(graph.size(),0);",
+            "\tvi st;",
+            "\tfor(int i=0;i<len(graph);i++){",
+            "\t\tst.pb(i);",
+            "\t}",
+            "\twhile(!st.empty()){",
+            "\t\tint node = st.back();",
+            "\t\tst.pop_back();",
+            "\t\tif(node<0){",
+            "\t\t\tres.pb(~node);",
+            "\t\t}",
+            "\t\telse if(!found[node]){",
+            "\t\t\tfound[node] = 1;",
+            "\t\t\tst.pb(~node);",
+            "\t\t\tfor (auto j:graph[node]){",
+            "\t\t\t\tst.pb(j);",
+            "\t\t\t}",
+            "\t\t}",
+            "\t}",
+            "\treturn res;",
+            "}"
+        ],
+        "description": "graphoth implementation"
     }
 }
