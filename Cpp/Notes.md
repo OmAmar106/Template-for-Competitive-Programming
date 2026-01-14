@@ -22,5 +22,6 @@
     };
 18. __builtin_popcount(m) : popcount of the number
 19. bitset<const> bt; -> faster version of bitarray of python, considerably faster.
+20. iota(arr.begin(),arr.end(),0) = arr = [i for i in range(n)]
 
 n. Be happy with your faster code :) 
