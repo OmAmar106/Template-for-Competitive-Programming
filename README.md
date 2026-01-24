@@ -110,6 +110,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
         - **lowlink**: Returns all the articulation points and bridges in iterative way. **
         - **find_2ecc**: Returns the Two Edge Connected Component. **
+    - **Graph 8(graph_decom)**: Centroid Decompositon (Similar to Merge Sort)
+        - **Shallowest Decomposition Tree**: O(N) Decomposition
+        - **Centroid Decomposition Tree**: O(N log N) Standard Decomposition
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.

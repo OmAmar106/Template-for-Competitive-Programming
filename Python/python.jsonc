@@ -206,7 +206,7 @@
     "detcp": {
         "prefix": "detcp",
         "body": [
-            "import sys,math,cmath,random,os,time,psutil",
+            "import sys,math,cmath,random,os,time,psutil,hashlib",
             "from heapq import heappush,heappop",
             "from bisect import bisect_right,bisect_left",
             "from collections import Counter,deque,defaultdict",
@@ -292,7 +292,8 @@
             "print(f\"Time Taken : {time.time()-start:.2f} s\")",
             "mem = process.memory_info().rss / 1e6",
             "print(f\"Memory Used : {mem:.2f} MB\")",
-            "import hashlib;print('Hash Value :',hashlib.md5(open(__file__, 'rb').read()).hexdigest())"
+            "print('Hash Value : ',end='')",
+            "print(hashlib.md5(open(__file__, 'rb').read()).hexdigest())"
         ],
         "description": "Template for details of runtime"
     },
