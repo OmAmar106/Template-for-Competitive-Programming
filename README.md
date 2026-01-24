@@ -43,7 +43,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Linear Algebra**:
         - **solve_quadratic**: Solves ax2+bx+c=0 for integer roots.
         - **solve_cubic**: Solves ax3+bx2+cx+d=0 for integer roots.
-        - **Max Xor**: Returns array of elements such that their XOR is maximized.
+        - **Xor Basis**: Returns array of elements such that any element added to the data structure can be made using their combination.
         - **Simplex Bland**: Solves LPP Problems using Simplex Method.
         - **s_lr**: Computer Summation of i**power for l<=i<=r, given power<=3
     - **Sparse Table**: Sparse Table.

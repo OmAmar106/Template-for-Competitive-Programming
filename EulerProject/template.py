@@ -1,4 +1,4 @@
-import sys,math,cmath,random,os,time,psutil
+import sys,math,cmath,random,os,time,psutil,hashlib
 from heapq import heappush,heappop
 from bisect import bisect_right,bisect_left
 from collections import Counter,deque,defaultdict
@@ -85,3 +85,6 @@ print("\n\n\n########## Stats ##########")
 print(f"Time Taken : {time.time()-start:.2f} s")
 mem = process.memory_info().rss / 1e6
 print(f"Memory Used : {mem:.2f} MB")
+print("Hash Value : ",end='')
+with open(__file__, "rb") as f:
+    print(hashlib.md5(f.read()).hexdigest())
