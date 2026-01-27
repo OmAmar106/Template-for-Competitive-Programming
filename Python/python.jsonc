@@ -1909,6 +1909,7 @@
         "body": [
             "class PersistentSegmentTree:",
             "",
+            "\t# Everything is 0 based indexing and [l,r]",
             "\tclass Node:",
             "\t\tdef __init__(self, value=0, left=None, right=None):",
             "\t\t\tself.value = value",
@@ -1943,6 +1944,9 @@
             "\t\treturn nodes[(0, self.n - 1)]",
             "",
             "\tdef update(self, version, pos, value):",
+            "\t\t# Returns the root to the new tree, ",
+            "\t\t# now you must add it to versions yourself",
+            "\t\t# seg.versions[version] = seg.update(version, pos, value)",
             "\t\told_root = self.versions[version]",
             "\t\tstack, path = [(old_root, 0, self.n - 1)], []",
             "\t\twhile stack:",
