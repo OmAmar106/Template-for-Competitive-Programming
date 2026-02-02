@@ -120,7 +120,6 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Mono Deque**: Monotonic Deque, gives the cumulative assosciative function value of the elements within the deque in amortized O(1).
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
-    - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
     - **DP Optimizations**:
         - **Knuth's Optimization**: 
         
@@ -139,6 +138,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
             Condition:
             
                 opt[i][j] <= opt[i][j+1]
+    - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
