@@ -121,6 +121,24 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
     - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
+    - **DP Optimizations**:
+        - **Knuth's Optimization**: 
+        
+            dp[i][j] = min(dp[i][k]+dp[k+1][j] over all k)+cost(i,j)
+        
+            Condition: 
+                
+                For all a<=b<=c<=d:
+                	cost(a,c)+cost(b,d)<=cost(a,d)+cost(b,c)
+                opt[l][r-1] <= opt[l][r] <= opt[l+1][r]
+        
+        - **Divide and Conquer Optimization**:
+            
+            dp[i][j] = min(dp[l][j-1]+cost(l,i) over all l)
+            
+            Condition:
+            
+                opt[i][j] <= opt[i][j+1]
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
