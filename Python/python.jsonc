@@ -3777,7 +3777,7 @@
             "\t\tmid = (l + r) // 2",
             "\t\tbest_k = -1",
             "\t\tbest_val = float('inf')",
-            "\t\tend = min(mid - 1, opt_r)",
+            "\t\tend = max(0,min(mid - 1, opt_r))",
             "\t\tfor k in range(opt_l, end + 1):",
             "\t\t\tval = prev[k] + cost(k, mid)",
             "\t\t\tif val < best_val:",
