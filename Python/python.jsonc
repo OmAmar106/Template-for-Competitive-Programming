@@ -1593,7 +1593,7 @@
         ],
         "description": "shclass implementation"
     },
-    "Geometry": {
+    "geometry": {
         "prefix": "geometry",
         "body": [
             "## here onwards, it is for intersection only, even the point class is different",
@@ -1670,9 +1670,22 @@
             "is_in_circle = lambda p, c, r: sum(i * i - j * j for i, j in zip(p, c)) < r * r",
             "incircle_radius = lambda a, b, c: area(a, b, c) / (perimeter(a, b, c) / 2)",
             "circumcircle_radius = lambda a, b, c: (dist(a, b) * dist(b, c) * dist(c, a)) / (4 * area(a, b, c))",
-            "##"
+            "##",
+            "",
+            "def convex_hull(P):",
+            "\tif len(P)<=1:return P",
+            "\tcross = lambda a,b,c: (a[0] - b[0]) * (c[1] - b[1]) - (a[1] - b[1]) * (c[0] - b[0])",
+            "\tP = sorted(P)",
+            "\tdef f(P):",
+            "\t\tlower = []",
+            "\t\tfor p in P:",
+            "\t\t\twhile len(lower) >= 2 and cross(lower[-2], lower[-1], p) < 0:",
+            "\t\t\t\tlower.pop()",
+            "\t\t\tlower.append(p)",
+            "\t\treturn lower",
+            "\treturn f(P)[:-1]+f(P[::-1])[:-1]"
         ],
-        "description": "Geometry implementation"
+        "description": "geometry implementation"
     },
     "Tries": {
         "prefix": "tries",

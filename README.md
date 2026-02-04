@@ -71,7 +71,22 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **partition**: Ways to partition n into k or fewer parts of size 1 or greater
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
     - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
-    - **Geometry**: All Geometry formulas.
+    - **Geometry**:
+        - **onSegment**: returns True if q lies on pr
+        - **orientation**: Checks orientation of p,q,r
+        - **doIntersect**: Checks if two line segments intersect
+        - **get_2dline**: Returns normalized 2d line
+        - **is_parallel**: Checks if lines are parallel
+        - **is_same**: Checks if two lines are same
+        - **collinear**: Checks if three points are collinear
+        - **intersect**: Returns intersection point of 2 lines
+        - **rotate**: Rotates point p around origin by thetha(radians)
+        - **perimeter**: Gives perimeter of a polygon
+        - **area**: Polygon area (shoelace formula)
+        - **is_in_circle**: checks if point p is inside circle centered at c with radius r
+        - **incircle_radius**: Radius incircle of triangle
+        - **circumecircle_radius**: Radius of circumcircle
+        - **Convex Hull**: Returns minimal set of points, within which all other points are contained
     - **Fast Fourier Transformation(FFT)**: Polynomial Multiplication.
     - **XOR_dict**: Dictionary Having inbuilt hashing, has Xdict and Xset.
     - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
