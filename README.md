@@ -50,6 +50,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
     - **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
     - **SegmentTree(SegmentOther)**: Lazy Propogated Segment Tree for all operations.
+    - **2-D SegmentTree**: 2-D Segment Tree.
     - **bootstrap**: Code snippet to make recursion possible in python.
     - **tries**: Tries
     - **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
@@ -154,6 +155,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
             
                 opt[i][j] <= opt[i][j+1]
     - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
+    - **Roll Back DSU**: DSU with option to roll back (stack like).
+    - **Partially Persistent DSU**: No option to branch from in between version, but faster.
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
