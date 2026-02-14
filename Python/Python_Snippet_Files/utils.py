@@ -10,6 +10,24 @@ def interactive():
 	globals()['print'] = lambda *args, **kwargs: builtins.print(*args, flush=True, **kwargs)
 # interactive()
 
+def reduce_time():
+	# reduces run time, but increases the change of mle
+	import gc
+	gc.disable()
+# reduce_time()
+
+ordalp = lambda s : ord(s)-65 if s.isupper() else ord(s)-97
+alp = lambda x : chr(97+x)
+yes = lambda : print("Yes")
+no = lambda : print("No")
+yn = lambda flag : print("Yes" if flag else "No")
+printf = lambda x : print(-1 if x==float('inf') else x)
+lalp = 'abcdefghijklmnopqrstuvwxyz'
+ualp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+dirs = ((1,0),(0,1),(-1,0),(0,-1))
+dirs8 = ((1,0),(0,1),(-1,0),(0,-1),(1,-1),(-1,1),(1,1),(-1,-1))
+ldir = {'D':(1,0),'U':(-1,0),'R':(0,1),'L':(0,-1)}
+
 def GI(n,m=None,sub=-1,dirs=False,weight=False):
 	if m==None:
 		m = n-1
@@ -27,15 +45,3 @@ def GI(n,m=None,sub=-1,dirs=False,weight=False):
 			if not dirs:
 				d[v+sub].append((u+sub,w))
 	return d
-
-ordalp = lambda s : ord(s)-65 if s.isupper() else ord(s)-97
-alp = lambda x : chr(97+x)
-yes = lambda : print("Yes")
-no = lambda : print("No")
-yn = lambda flag : print("Yes" if flag else "No")
-printf = lambda x : print(-1 if x==float('inf') else x)
-lalp = 'abcdefghijklmnopqrstuvwxyz'
-ualp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-dirs = ((1,0),(0,1),(-1,0),(0,-1))
-dirs8 = ((1,0),(0,1),(-1,0),(0,-1),(1,-1),(-1,1),(1,1),(-1,-1))
-ldir = {'D':(1,0),'U':(-1,0),'R':(0,1),'L':(0,-1)}
