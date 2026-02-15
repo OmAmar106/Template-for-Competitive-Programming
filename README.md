@@ -101,7 +101,6 @@ This repository contains a collection of Python,CPP code snippets and templates,
             - **SuffArray**: O(NlogN) but faster, due to less constant time
         - **LCP**: Longest common prefix between adjacent elements in Suffix Array.
     - **Graph 1(graphadv)**:
-        - **Dinic**: Max Flow Problem. **
         - **Binary Lifting**: Binary Lifting.
         - **Virtual Tree**: Auxillary/Virtual Tree **
     - **Graph 2(2sat)**:
@@ -129,6 +128,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 8(graph_decom)**: Centroid Decompositon (Similar to Merge Sort)
         - **Shallowest Decomposition Tree**: O(N) Decomposition
         - **Centroid Decomposition Tree**: O(N log N) Standard Decomposition
+    - **Graph 9(graphflow)**: Graph Flow
+        - **Dinic**: V2E
+        - **HLPP**: V2root(E) 
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
