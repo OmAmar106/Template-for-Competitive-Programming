@@ -70,6 +70,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **derangements**: Number of permutations of n objects where no object appears in its original position
         - **stirling_2**: Number of ways to partition n elements into k non-empty subsets
         - **partition**: Ways to partition n into k or fewer parts of size 1 or greater
+        - **Lucas nCk**: Used to find nCk for huge n and k modulo p in log p(n)
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
     - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
     - **Geometry**:

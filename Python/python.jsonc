@@ -431,6 +431,7 @@
         "body": [
             "class Factorial:",
             "\tdef __init__(self, N, mod):",
+            "\t\tassert(N<mod)",
             "\t\tN += 1",
             "\t\tself.mod = mod",
             "\t\tself.f = [1 for _ in range(N)]",
@@ -454,6 +455,19 @@
             "\t\tif n<0 or (k<1 and n>0):return 0",
             "\t\tif n==0:return 1",
             "\t\treturn 1 if n==1 else self.partition(n,k-1)+self.partition(n-k,k)",
+            "\tdef lucas_nCk(self,n,k):",
+            "\t\t# Lucas's theorem for finding ((nCk)%p) for large n,k",
+            "\t\t# in log p(n)",
+            "\t\tans = 1",
+            "\t\tp = self.mod",
+            "\t\twhile n or k:",
+            "\t\t\tx = n%p",
+            "\t\t\ty = k%p",
+            "\t\t\tans *= self.combi(x,y)",
+            "\t\t\tans %= p",
+            "\t\t\tn //= p",
+            "\t\t\tk //= p",
+            "\t\treturn ans",
             "\tdef catalan(self, n):",
             "\t\treturn (self.combi(2 * n, n) - self.combi(2 * n, n - 1)) % self.mod",
             "\tdef fac(self, n):",
@@ -470,7 +484,7 @@
             "\tdef inv(self, n):",
             "\t\treturn self.f[n-1] * self.g[n] % self.mod"
         ],
-        "description": "Class for efficient computation of factorials, combinations, permutations, Catalan numbers, and modular inverses with precomputation."
+        "description": "pnc implementation"
     },
     "numtheory": {
         "prefix": "numtheory",
