@@ -2756,7 +2756,7 @@
         ],
         "description": "graphflatten implementation"
     },
-    "Graphoth": {
+    "graphoth": {
         "prefix": "graphoth",
         "body": [
             "def euler_path(d):",
@@ -2822,9 +2822,33 @@
             "\t\tif any(found[nei] for nei in graph[node]):",
             "\t\t\treturn None",
             "\t\tfound[node] = 0",
-            "\treturn res[::-1]"
+            "\treturn res[::-1]",
+            "",
+            "def euler_path_faster(d):",
+            "\t# expects a adjacency list having u -> (v,edge index)",
+            "\t# v -> (u,~edge index) (for reverse edges)",
+            "\tn = len(d)",
+            "\tvisited = defaultdict(lambda :False)",
+            "\tvisited2 = [False]*n",
+            "\tans = []",
+            "\tfor cur in range(n):",
+            "\t\tif not visited2[cur] and d[cur]:",
+            "\t\t\tstart = [cur]",
+            "\t\t\twhile start:",
+            "\t\t\t\tcur = start[-1]",
+            "\t\t\t\tvisited2[cur] = True",
+            "\t\t\t\twhile d[cur] and visited[max(d[cur][-1][1],~d[cur][-1][1])]:",
+            "\t\t\t\t\td[cur].pop()",
+            "\t\t\t\tif len(d[cur])==0:",
+            "\t\t\t\t\tstart.pop()",
+            "\t\t\t\t\tcontinue",
+            "\t\t\t\tk1,k2 = d[cur].pop()",
+            "\t\t\t\tans.append(k2)",
+            "\t\t\t\tvisited[max(k2,~k2)] = True",
+            "\t\t\t\tstart.append(k1)",
+            "\treturn ans"
         ],
-        "description": "Graphoth implementation"
+        "description": "graphoth implementation"
     },
     "graph": {
         "prefix": "graph",
