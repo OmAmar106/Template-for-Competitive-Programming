@@ -46,10 +46,10 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=0cm,left=0.5cm,right=0.5cm,bottom=0.2cm} }
+    { \geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-        {\geometry{top=0.2cm,left=0.5cm,right=0.5cm,bottom=0.2cm} }
-        {\geometry{top=0.2cm,left=0.5cm,right=0.5cm,bottom=0.2cm} }
+        {\geometry{top=0.6cm,left=0.5cm,right=0.5cm,bottom=0.6cm} }
+        {\geometry{top=0.6cm,left=0.5cm,right=0.5cm,bottom=0.6cm} }
     }
 
 % Turn off header and footer
@@ -859,74 +859,6 @@ class SegmentTree:
             if l & 1: res = self.func(res, self.tree[l]); l += 1
             if not r & 1: res = self.func(res, self.tree[r]); r -= 1
             l >>= 1; r >>= 1
-        return res
-\end{lstlisting}
-
-Lazy Segment Tree 2
-\begin{lstlisting}[language=Python]
-class SegmentTree:
-    def __init__(self, data, default=0, func=max):
-        # don't forget to change func here
-        # default is the value given to it byy default
-        self._default = default
-        self._func = func
-        self._len = len(data)
-        self._size = _size = 1 << (self._len - 1).bit_length()
-        self._lazy = [0] * (2 * _size)
-        self.data = [default] * (2 * _size)
-        self.data[_size:_size + self._len] = data
-        for i in reversed(range(_size)):
-            self.data[i] = func(self.data[i + i], self.data[i + i + 1])
-    def __len__(self):
-        return self._len
-    def _push(self, idx):
-        q, self._lazy[idx] = self._lazy[idx], 0
-        self._lazy[2 * idx] += q
-        self._lazy[2 * idx + 1] += q
-        self.data[2 * idx] += q
-        self.data[2 * idx + 1] += q
-    def _update(self, idx):
-        for i in reversed(range(1, idx.bit_length())):
-            self._push(idx >> i)
-    def _build(self, idx):
-        idx >>= 1
-        while idx:
-            self.data[idx] = self._func(self.data[2 * idx], self.data[2 * idx + 1]) + self._lazy[idx]
-            idx >>= 1
-    def add(self, start, stop, value):
-        # lazily add value to [start, stop)
-        start = start_copy = start + self._size
-        stop = stop_copy = stop + self._size
-        while start < stop:
-            if start & 1:
-                self._lazy[start] += value
-                self.data[start] += value
-                start += 1
-            if stop & 1:
-                stop -= 1
-                self._lazy[stop] += value
-                self.data[stop] += value
-            start >>= 1
-            stop >>= 1
-        self._build(start_copy)
-        self._build(stop_copy - 1)
-    def query(self, start, stop, default=-float('inf')):
-        # func of data[start, stop)
-        # don't forget to update the default
-        start += self._size
-        stop += self._size
-        self._update(start)
-        self._update(stop - 1)
-        res = default
-        while start < stop:
-            if start & 1:
-                res = self._func(res, self.data[start])
-                start += 1
-            if stop & 1:
-                stop -= 1
-                res = self._func(res, self.data[stop])
-            start >>= 1
-            stop >>= 1
         return res
 \end{lstlisting}
 
