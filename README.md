@@ -161,6 +161,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **FWHT**: Convolution such that ans[i] = summation of a[j]*b[k], where j logical condition k = i
     - **Roll Back DSU**: DSU with option to roll back (stack like).
     - **Partially Persistent DSU**: No option to branch from in between version, but faster.
+    - **Offline Dynamic Connectivity**: Add and Remove edges, and check DSU properties in between.
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
@@ -194,6 +195,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 1 (bgraph)**: DFS, BFS, Dijkstra
     - **Graph 2 (graphoth)**: TopoSort
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
+    - **Rollback/Partially Persistent DSU (rbdsu)**: Rollback and Partially Persistent DSU.
 
 ## Note:
 Website to convert the .json format to appropriate codes: 
