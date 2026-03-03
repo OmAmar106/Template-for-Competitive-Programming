@@ -130,8 +130,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Shallowest Decomposition Tree**: O(N) Decomposition
         - **Centroid Decomposition Tree**: O(N log N) Standard Decomposition
     - **Graph 9(graphflow)**: Graph Flow
-        - **Dinic**: V2E
-        - **HLPP**: V2root(E) 
+        - **Dinic**: Maximal graph flow V2E
+        - **HLPP**: Maximal Graph flow V2root(E)
+        - **Kuhn's Algorithm**: Maximal Bipartite Matching (max edges without shared vertices)
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
