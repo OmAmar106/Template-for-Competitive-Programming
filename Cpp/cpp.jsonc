@@ -45,7 +45,7 @@
             "mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());",
             "",
             "#ifdef LOCAL",
-            "#define dbg(x...) cerr<<\"[\"<<#x<<\"] = \"; print(x);",
+            "#define dbg(x...) cout<<\"[\"<<#x<<\"] = \"; print(x);",
             "#else",
             "#define dbg(x...)",
             "#endif",
