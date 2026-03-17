@@ -132,7 +132,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 9(graphflow)**: Graph Flow
         - **Dinic**: Maximal graph flow V2E
         - **HLPP**: Maximal Graph flow V2root(E)
-        - **Kuhn's Algorithm**: Maximal Bipartite Matching (max edges without shared vertices = min vertices so every edge touches one chosen vertex)
+        - **Kuhn's Algorithm**: E*V Maximal Bipartite Matching (max edges without shared vertices = min vertices so every edge touches one chosen vertex)
+        - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
@@ -198,6 +199,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
     - **Rollback/Partially Persistent DSU (rbdsu)**: Rollback and Partially Persistent DSU.
     - **Treap**: Treap
+    - **Graph 9(graphflow)**:
+        - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching
 
 ## Note:
 Website to convert the .json format to appropriate codes: 
