@@ -48,7 +48,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **s_lr**: Computer Summation of i**power for l<=i<=r, given power<=3
     - **Sparse Table**: Sparse Table.
     - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
-    - **SegmentTree**: Faster Lazy propogated Segment Tree, but the operation can only have functions such that f(a,a) = a.
+    - **SegmentTree(SegmentNode)**: Has Nodes, easier to update.
     - **SegmentTree(SegmentOther)**: Lazy Propogated Segment Tree for all operations.
     - **2-D SegmentTree**: 2-D Segment Tree.
     - **bootstrap**: Code snippet to make recursion possible in python.
@@ -188,6 +188,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **tries**: Tries
     - **Binary Indexed Tree(BIT)**: Binary Indexed Tree.
     - **Segment Tree(Segment Point)**: Segment Tree with point updates.
+    - **Persistent Segment Tree(perseg)**: Persistent Seg Tree
     - **Convex Hull(hull)**: Convex Hull, with two different implementations.
     - **Combinatorics(pnc)**: Combinatorics.
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
