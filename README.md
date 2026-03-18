@@ -132,8 +132,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 9(graphflow)**: Graph Flow
         - **Dinic**: Maximal graph flow V2E
         - **HLPP**: Maximal Graph flow V2root(E)
-        - **Kuhn's Algorithm**: E*V Maximal Bipartite Matching (max edges without shared vertices = min vertices so every edge touches one chosen vertex)
-        - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching
+    - **Graph 10(graphmatch)**: Maximal Bipartite Matching
+        - **Kuhn's Algorithm**: E*V (max edges without shared vertices = min vertices so every edge touches one chosen vertex)
+        - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching -> return min vertex cover/ max edges
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
