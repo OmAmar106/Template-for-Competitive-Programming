@@ -133,7 +133,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Dinic**: Maximal graph flow V2E
         - **HLPP**: Maximal Graph flow V2root(E)
     - **Graph 10(graphmatch)**: Maximal Bipartite Matching
-        - **Kuhn's Algorithm**: E*V (max edges without shared vertices = min vertices so every edge touches one chosen vertex)
+        - **Kuhn's Algorithm**: E*V
         - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching -> return min vertex cover/ max edges
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
@@ -203,6 +203,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Treap**: Treap
     - **Graph 9(graphflow)**:
         - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching
+    - **HLD**: HLD
 
 ## Note:
 Website to convert the .json format to appropriate codes: 
@@ -223,6 +224,7 @@ https://github.com/OmAmar106/JSON-To-Zip-Codes-Converter
 - **Bridges**: Edges which on removal increases number of components.
 - **Articulation Points**: Vertex which on removal increase number of components.
 - **2ECC**: Divides graph into subgraphs, where two elements within the same component share a cycle.
+- **Maximal Bipartite Matching**: max edges without shared vertices = min vertices so every edge touches one chosen vertex.
 
 ## In Progress
 
