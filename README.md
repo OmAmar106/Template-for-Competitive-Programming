@@ -94,6 +94,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Persistent Segment Tree(perseg)**: Persistent Segment Tree.
     - **Binary Trie(b_trie)**: Trie with each node having two children, faster.
     - **Heavy Light Decomposition(hld)**: Segment Tree Based Implementation.
+    - **BWT**: Burrow's Wheeler Transform Returns last character of sorted array of all rotations
     - **String Functions(sf)**:
         - **Z-function**: Longest Prefix Matching.
         - **Manacher's Algorithm**: Longest Palindrome.

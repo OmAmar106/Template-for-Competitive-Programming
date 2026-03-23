@@ -24,5 +24,13 @@
 19. bitset<const> bt; -> faster version of bitarray of python, considerably faster.
 20. iota(arr.begin(),arr.end(),0) = arr = [i for i in range(n)]
 21. Run the code with -DLOCAL Compilter Flag for the dbg to work properly.
+22. Create .clangd file to use cpp in vs code
+    '''
+    CompileFlags:
+    Add:
+        - --target=x86_64-w64-windows-gnu
+        - -std=gnu++17
+    Compiler: C:/mingw64/bin/g++.exe
+    '''
 
 n. Be happy with your faster code :) 
