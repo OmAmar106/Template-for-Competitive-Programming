@@ -96,7 +96,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Heavy Light Decomposition(hld)**: Segment Tree Based Implementation.
     - **BWT**: Burrow's Wheeler Transform Returns last character of sorted array of all rotations
     - **String Functions(sf)**:
-        - **Z-function**: Longest Prefix Matching.
+        - **KMP**: Longest Prefix Matching ending at position i.
+        - **Z-function**: Longest Prefix Matching starting at position i.
         - **Manacher's Algorithm**: Longest Palindrome.
         - **Suffix Array**: Suffix Array. **
             - **SuffArr**: O(N) theoretical complexity but slower
@@ -142,6 +143,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **2-D Binary Indexed Tree(2DBIT)**: 2- Dimensional Binary Indexed Tree.
     - **Mono Deque**: Monotonic Deque, gives the cumulative assosciative function value of the elements within the deque in amortized O(1).
     - **Suffix Automaton(sautomaton)**: Online String Data Structure: All_occurence, Missing_Substring, LCSubstring, AllSubstring, kth distinct, count distinct, count occurences, is_substring, add.
+    - **KMP Automaton(sautomaton)**: Online String Data Structure: Tells if its a pattern in some other string or number of strings in which it is a pattern atleast once
     - **Square Root Decomposition(sqrt)**: Precompute answers of root n windows and answer queries in root n.
     - **DP Optimizations**:
         - **Knuth's Optimization**: 
