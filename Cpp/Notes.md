@@ -32,5 +32,7 @@
         - -std=gnu++17
     Compiler: C:/mingw64/bin/g++.exe
     '''
+23. stoll(string) : converts strong to long long
+24. to_string(num) : converts number to string
 
 n. Be happy with your faster code :) 

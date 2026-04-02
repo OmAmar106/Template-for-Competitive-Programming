@@ -207,6 +207,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 9(graphflow)**:
         - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching
     - **HLD**: HLD
+    - **FWTH**: FWHT
 
 ## Note:
 Website to convert the .json format to appropriate codes: 
