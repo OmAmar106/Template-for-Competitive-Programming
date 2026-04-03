@@ -168,6 +168,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Partially Persistent DSU**: No option to branch from in between version, but faster.
     - **Offline Dynamic Connectivity**: Add and Remove edges, and check DSU properties in between.
     - **Treap**: Treap
+    - **Min Cost Max Flow**: Minimum cost that can be used while maximizing the flow
+        - **MCMF**: To be used when the flow in between edges is non constant, O(F E V)
+        - **Hungarian**: To be used when flow is constant, and you have a cost matrix O(n3)
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
