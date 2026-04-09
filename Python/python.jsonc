@@ -504,7 +504,10 @@
             "\t\tif n < m or m < 0 or n < 0: return 0",
             "\t\treturn self.f[n] * self.g[n - m] % self.mod",
             "\tdef inv(self, n):",
-            "\t\treturn self.f[n-1] * self.g[n] % self.mod"
+            "\t\treturn self.f[n-1] * self.g[n] % self.mod",
+            "\tdef beggar(self,n,sumi):",
+            "\t\t# number of ways n elements >=0 have sum sumi",
+            "\t\treturn self.combi(n+sumi-1,sumi)"
         ],
         "description": "pnc implementation"
     },
