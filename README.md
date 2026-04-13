@@ -172,6 +172,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Min Cost Max Flow**: Minimum cost that can be used while maximizing the flow
         - **MCMF**: To be used when the flow in between edges is non constant, O(F E V)
         - **Hungarian**: To be used when flow is constant, and you have a cost matrix O(n3)
+    - **2-D Prefix Sum (Prefix 2D)**: 2D prefix class for matrix with query function
 
 - **CPP**:
     The repository includes the following code snippets in the CPP version:
