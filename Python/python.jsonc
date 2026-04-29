@@ -4652,8 +4652,6 @@
             "\t\tself._size[self.size:] = [1] * self.size",
             "\t\tfor i in range(self.size - 1, 0, -1):",
             "\t\t\tself._size[i] = self._size[i << 1] + self._size[i << 1 | 1]",
-            "\t\tself.lazy_add = 0 if self.mode == 's' else 0",
-            "\t\tself.lazy_set = None",
             "\t\tself.lazy_add = [0] * self.size",
             "\t\tself.lazy_set = [None] * self.size",
             "\t\tfor i in range(self.n):",
