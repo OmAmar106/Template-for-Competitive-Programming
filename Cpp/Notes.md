@@ -34,5 +34,6 @@
     '''
 23. stoll(string) : converts strong to long long
 24. to_string(num) : converts number to string
+25. In treap, need to do Node* st1 = new Node(st[0]);, since function expects pointer
 
 n. Be happy with your faster code :) 
