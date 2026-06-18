@@ -4,9 +4,9 @@ To Add To Template
 
 * Wavelet Tree
 
-* Link Cut Tree
-
 * Miller For 10**18
+
+* Sieve in O(N)
 
 * I should be able to easily run cpp with python if i want in stress testing, add common arrays, graphs input code, some randomized, some which generally fail like star graph its in you in whatsapp, similar tcs, also ig i could put a time limit for each tc run time
 

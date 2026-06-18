@@ -140,6 +140,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 10(graphmatch)**: Maximal Bipartite Matching
         - **Kuhn's Algorithm**: E*V
         - **Hopcroft Karp Algorithm**: E*root(V) - Maximal Bipartite Matching -> return min vertex cover/ max edges
+    - **Graph 11(lct)**: LCT
+        - **Link Cut Tree**: O(log n) complexity to remove, create edge, check connectivity, distance, need to add more such functions
     - **utils**: Smaller Less relevant function and other constants and graph input.
     - **Persistent Disjoint Setunion(perdsu)**: Persistent Disjoint Setunion.
     - **Merge Sort Tree(sorttree)**: Merge Sort Tree.
