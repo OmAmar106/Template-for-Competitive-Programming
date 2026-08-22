@@ -88,6 +88,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **rotate**: Rotates point p around origin by thetha(radians)
         - **perimeter**: Gives perimeter of a polygon
         - **area**: Polygon area (shoelace formula)
+        - **centroid**: Returns the centroid of a polygon
         - **is_in_circle**: checks if point p is inside circle centered at c with radius r
         - **incircle_radius**: Radius incircle of triangle
         - **circumecircle_radius**: Radius of circumcircle
