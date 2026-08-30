@@ -2671,7 +2671,7 @@
             "\t\tparent = self.parent",
             "\t\tdata = self.data",
             "\t\tf = self.f",
-            "\t\tval = c",
+            "\t\tval = c #if the values are on vertex otherwise data[0][self.lca(a,b)]",
             "\t\tc = self.lca(a, b)",
             "\t\tfor x,d in (a, depth[a] - depth[c]), (b, depth[b] - depth[c]):",
             "\t\t\tfor i in range(d.bit_length()):",
