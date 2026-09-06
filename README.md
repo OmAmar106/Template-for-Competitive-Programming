@@ -30,6 +30,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **all_factors**: Returns all factors of a number in log n + (num of fact) complexity.
     - **Number Theory 2(numrare)**:
         - **pollard_rho**: Returns a random factor of n.
+        - **miller_pollard_rho**: Miller along with combination of pollard rho.
         - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
         - **Discrete Log**: returns smallest x such that pow(a,x,mod)=b
         - **extended_gcd**: Extended GCD. **
