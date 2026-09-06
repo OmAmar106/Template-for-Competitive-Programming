@@ -391,6 +391,7 @@
             "",
             "class LiChao:",
             "\t__slots__ = (\"lo\",\"hi\",\"mid\",\"m\",\"b\",\"left\",\"right\")",
+            "\t# lo = min value of x that you will query",
             "\tdef __init__(self,lo,hi):",
             "\t\tself.lo = lo",
             "\t\tself.hi = hi",
