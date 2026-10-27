@@ -114,6 +114,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 2(2sat)**:
         - **2-SAT**: 2 Sat implementation.
         - **Strongly Connected Component**: Finds the different SCCs. **
+        - **DAG to SCC**: Converts a DAG to a SCC using minimum number of edges and returns the edges
         - **Khan's Algorithm**: Topological Sorting.
     - **Graph 3(graphflattern)**:
         - **Flattening of Tree**: Flattens tree using DFS.
