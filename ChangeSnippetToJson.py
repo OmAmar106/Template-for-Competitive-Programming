@@ -1,5 +1,6 @@
 import json
 import subprocess
+import platform
 
 def replace_spaces_with_tabs(code, spaces_per_tab=4):
     lines = code.split('\n')
@@ -27,10 +28,18 @@ tobeconverted = """
 """
 
 s = input("Enter The Name : ")
-json_output = code_to_json_class(s,tobeconverted)
-print(json_output) 
+json_output = code_to_json_class(s, tobeconverted)
+print(json_output)
 
 s = json_output[1:-1]
-subprocess.run("clip", text=True, input=s)
 
-print("Copied Succesfully.")
+os_name = platform.system()
+
+if os_name == "Windows":
+    subprocess.run(["clip"], text=True, input=s, check=True)
+elif os_name == "Linux":
+    subprocess.run(["xclip", "-selection", "clipboard"], text=True, input=s, check=True)
+else:
+    raise OSError(f"Unsupported operating system: {os_name}")
+
+print("Copied Successfully.")

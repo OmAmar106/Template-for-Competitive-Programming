@@ -20,7 +20,9 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **TCP**: CP Snippet for a single testcase, particularly for Atcoder Problems.
     - **DETCP**: CP Snippet with logs, and I/O from files.
     - **String Hashing(shclass)**: String Hashing.
-    - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large.
+    - **Fenwick Sorted List(fsortl)**: Fenwick Tree Based Sorted List, slow when numbers are large O(n^(1/2)).
+    - **Bucket Sorted List(bsortl)**: Bucket based sorted list O(n^(1/2)) - Well Tested.
+    - **AVL Sorted List(asortl)**: AVL Tree based sorted list O(log n).
     - **Number Theory 1(numtheory)**: 
         - **miller_isprime**: Calculates if a number is prime or not in 7log2n, better for bigger numbers.
         - **is_prime**: Checks if number if prime or not in root n.
@@ -49,7 +51,6 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Simplex Bland**: Solves LPP Problems using Simplex Method.
         - **s_lr**: Computer Summation of i**power for l<=i<=r, given power<=3
     - **Sparse Table**: Sparse Table.
-    - **Bucket Sorted List(bsortl)**: Bucket based sorted list.
     - **SegmentTree(SegmentNode)**: Has Nodes, easier to update.
     - **SegmentTree(SegmentOther)**: Lazy Propogated Segment Tree for all operations.
     - **2-D SegmentTree**: 2-D Segment Tree.
