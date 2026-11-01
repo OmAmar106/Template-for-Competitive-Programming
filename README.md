@@ -28,9 +28,11 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **is_prime**: Checks if number if prime or not in root n.
         - **sieve**: Precomputes primes upto the given number.
         - **all_fact**: Returns a sorted list of all factors of the given number in root n.
+        - **prime_factors_slow**: Returns prime factors in root n
+    - **Number Theory 2(numfast)**:
         - **prime_factors**: Returns the prime factors in the form of a Counter in log n.
         - **all_factors**: Returns all factors of a number in log n + (num of fact) complexity.
-    - **Number Theory 2(numrare)**:
+    - **Number Theory 3(numrare)**:
         - **pollard_rho**: Returns a random factor of n.
         - **miller_pollard_rho**: Miller along with combination of pollard rho.
         - **prime_factors_large**: Probablistic algo, returns prime factors in n^(1/4).
@@ -38,7 +40,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **extended_gcd**: Extended GCD. **
         - **composite_crt**: Chinese Remainder Theorem. **
         - **phi**: Computes Phi(n) for all n. **
-    - **Number Theory 3(nummat)**:
+        - **phi_large**: Computes Phi(n) in O(count(prime factors)).
+    - **Number Theory 4(nummat)**:
         - **Transpose**: Transpose.
         - **matmul**: Matrix Multiplication.
         - **matpow**: Power of a matrix.
