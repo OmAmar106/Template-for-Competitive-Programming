@@ -510,7 +510,9 @@
             "\t\treturn self.f[n-1] * self.g[n] % self.mod",
             "\tdef beggar(self,n,sumi):",
             "\t\t# number of ways n elements >=0 have sum sumi",
-            "\t\treturn self.combi(n+sumi-1,sumi)"
+            "\t\treturn self.combi(n+sumi-1,sumi)",
+            "",
+            "Lfac = Factorial(200000,MOD)"
         ],
         "description": "pnc implementation"
     },
