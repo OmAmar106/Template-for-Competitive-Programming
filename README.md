@@ -137,8 +137,8 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 6(dfsin)**: DFS within the main.
     - **Graph 7(graph_dmgt)**: For undirected graphs
         - **Bridges**: Finds all the bridges in the graph.
-        - **Bridges_on_path**: Finds all the bridges in the graph in path from 1 to n.
         - **lowlink**: Returns all the articulation points and bridges in iterative way. **
+        - **tarjan**: Returns tin, tout and low.
         - **find_2ecc**: Returns the Two Edge Connected Component. **
     - **Graph 8(graph_decom)**: Centroid Decompositon (Similar to Merge Sort)
         - **Shallowest Decomposition Tree**: O(N) Decomposition
