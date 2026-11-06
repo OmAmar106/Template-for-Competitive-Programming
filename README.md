@@ -138,6 +138,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
     - **Graph 7(graph_dmgt)**: For undirected graphs
         - **Bridges**: Finds all the bridges in the graph.
         - **lowlink**: Returns all the articulation points and bridges in iterative way. **
+        - **domintor_tree**: Returns dominator tree from root, edge from i to j means every path from root to j visits i, works for directed graph as well
         - **tarjan**: Returns tin, tout and low.
         - **find_2ecc**: Returns the Two Edge Connected Component. **
     - **Graph 8(graph_decom)**: Centroid Decompositon (Similar to Merge Sort)
