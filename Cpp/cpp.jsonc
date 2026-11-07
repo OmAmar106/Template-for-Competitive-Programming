@@ -1145,7 +1145,7 @@
             "\t\tfor (int i = 0; i < n; i++) {",
             "\t\t\tif (order[i] == order[negate(i)])",
             "\t\t\t\treturn {false, {}};",
-            "\t\t\tres[i] = order[i] > order[negate(i)];",
+            "\t\t\tres[i] = order[i] < order[negate(i)];",
             "\t\t}",
             "\t\treturn {true, res};",
             "\t}",
