@@ -81,6 +81,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **partition**: Ways to partition n into k or fewer parts of size 1 or greater
         - **Lucas nCk**: Used to find nCk for huge n and k modulo p in log p(n)
         - **beggar**: number of ways to choose k elements >= 0 such that their sum is n
+        - **eularian_number**: number of ways a permutation of n numbers has exactly k ascents (p[i]<p[i+1]) or k descents(p[i]>p[i+1]) or k excedances (p[i]>i)
     - **Diophantine Equation(dpheq)**: Solving Linear Equation.
     - **Disjoint Set Union(DSU)**: Also has the Union Find implementation.
     - **Geometry**:
