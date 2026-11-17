@@ -146,6 +146,7 @@ This repository contains a collection of Python,CPP code snippets and templates,
         - **Shallowest Decomposition Tree**: O(N) Decomposition
         - **Centroid Decomposition Tree**: O(N log N) Standard Decomposition
     - **Graph 9(graphflow)**: Graph Flow
+        - **MinCut**: Minimum Edges to be removed to disconnect source s from a sink t
         - **Dinic**: Maximal graph flow V2E
         - **HLPP**: Maximal Graph flow V2root(E)
     - **Graph 10(graphmatch)**: Maximal Bipartite Matching
