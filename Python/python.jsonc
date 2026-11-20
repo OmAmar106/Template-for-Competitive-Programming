@@ -4169,7 +4169,7 @@
             "def shallowest_decomposition_tree(graph, root=0):",
             "\t# returns a root and a directed tree, iterate on it and you",
             "\t# will find the new centroid",
-            "\t# slightly faster than centroid_decomposition_tree",
+            "\t# quite faster than centroid_decomposition_tree",
             "\tctz = lambda x:(x & -x).bit_length()-1",
             "\tn = len(graph)",
             "\tforbidden = [0] * n",
