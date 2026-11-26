@@ -73,11 +73,30 @@ class HopcroftKarp:
 					self.dist[self.matchR[v]] = self.dist[u] + 1
 					q.append(self.matchR[v])
 	def dfs(self, u):
-		for v in self.g[u]:
-			if self.matchR[v] == -1 or (self.dist[self.matchR[v]] == self.dist[u] + 1 and self.dfs(self.matchR[v])):
-				self.matchL[u] = v
-				self.matchR[v] = u
-				return True
+		stack = [u]
+		parent = {}
+		while stack:
+			u = stack[-1]
+			found = False
+			for v in self.g[u]:
+				w = self.matchR[v]
+				if w == -1:
+					path = [(u, v)]
+					while u != stack[0]:
+						p, pv = parent[u]
+						path.append((p, pv))
+						u = p
+					for x, y in path:
+						self.matchL[x] = y
+						self.matchR[y] = x
+					return True
+				if self.dist[w] == self.dist[u] + 1 and w not in parent:
+					parent[w] = (u, v)
+					stack.append(w)
+					found = True
+					break
+			if not found:
+				stack.pop()
 		return False
 	def max_matching(self,flag=True):
 		flow = 0
