@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '**/*.jsonc'
+  workflow_dispatch:
 
 permissions:
   contents: write
