@@ -12,7 +12,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-    "cp": {
+    "Fast_IO": {
         "prefix": "cp",
         "body": [
             "// Choose cpp when the time",
@@ -158,7 +158,7 @@
         ],
         "description": "cp implementation"
     },
-	"numtheory": {
+	"Number_Theory": {
         "prefix": "numtheory",
         "body": [
             "int mod_exp(int base, int exp, int mod = MOD) {",
@@ -259,7 +259,7 @@
         ],
         "description": "numtheory implementation"
     },
-	"shclass": {
+	"String_Hashing": {
         "prefix": "shclass",
         "body": [
             "int HMOD = 2147483647;",
@@ -304,7 +304,7 @@
         ],
         "description": "shclass implementation"
     },
-	"SparseTable": {
+	"Sparse_Table": {
         "prefix": "sparsetable",
         "body": [
             "class SparseTable {",
@@ -342,7 +342,7 @@
         ],
         "description": "SparseTable implementation"
     },
-    "SegmentTree": {
+    "Segment_Tree": {
         "prefix": "segmenttree",
         "body": [
             "class SegmentTree {",
@@ -449,7 +449,7 @@
         ],
         "description": "SegmentTree implementation"
     },
-	"BIT": {
+	"Fenwick_Tree": {
         "prefix": "bit",
         "body": [
             "class BIT {",
@@ -497,7 +497,7 @@
         ],
         "description": "BIT implementation"
     },
-	"SegmentPoint": {
+	"Segment_Point": {
         "prefix": "segmentpoint",
         "body": [
             "class SegmentTree {",
@@ -555,7 +555,7 @@
         ],
         "description": "SegmentPoint implementation"
     },
-    "hull": {
+    "Convex_Hull": {
         "prefix": "hull",
         "body": [
             "// class Line1 {",
@@ -717,7 +717,7 @@
         ],
         "description": "hull implementation"
     },
-	"tries": {
+	"Tries": {
         "prefix": "tries",
         "body": [
             "vector<int> left_child = {0}, right_child = {0}, treap_keys = {0};",
@@ -817,7 +817,7 @@
         ],
         "description": "tries implementation"
     },
-	"pnc": {
+	"Combinatorics": {
         "prefix": "pnc",
         "body": [
             "class Factorial {",
@@ -873,7 +873,7 @@
         ],
         "description": "pnc implementation"
     },
-	"dpheq": {
+	"DiophantineEquations": {
         "prefix": "dpheq",
         "body": [
             "class DiophantineEquations {",
@@ -934,7 +934,7 @@
         ],
         "description": "dpheq implementation"
     },
-	"graphs": {
+	"Graphs": {
         "prefix": "graphs",
         "body": [
             "vector<int> bellman_ford(int n, vector<tuple<int, int, int>> &edges, int start){",
@@ -1153,7 +1153,7 @@
         ],
         "description": "graphs implementation"
     },
-	"bgraphs": {
+	"Basic_Graphs": {
         "prefix": "bgraphs",
         "body": [
             "vector<int> bfsf(vector<vector<int>>& graph, int start = 0) {",
@@ -1219,7 +1219,7 @@
         ],
         "description": "bgraphs implementation"
     },
-	"DSU": {
+	"Disjoint_Set_Union": {
         "prefix": "dsu",
         "body": [
             "class DisjointSetUnion {",
@@ -1264,7 +1264,7 @@
         ],
         "description": "DSU implementation"
     },
-	"fft": {
+	"Fast_Fourier_Transformation": {
         "prefix": "fft",
         "body": [
             "class FFT {",
@@ -1376,7 +1376,7 @@
         ],
         "description": "fft implementation"
     },
-    "sorttree": {
+    "Merge_Sort_Tree": {
         "prefix": "sorttree",
         "body": [
             "class MergeSortTree {",
@@ -1445,8 +1445,7 @@
         ],
         "description": "sorttree implementation"
     },
-    
-    "sortl": {
+    "Sorted_List": {
         "prefix": "sortl",
         "body": [
             "template <typename T>",
@@ -1482,7 +1481,7 @@
         ],
         "description": "sortl implementation"
     },
-    "graphoth": {
+    "Graph_Other": {
         "prefix": "graphoth",
         "body": [
             "vi toposort(vii graph){",
@@ -1511,8 +1510,7 @@
         ],
         "description": "graphoth implementation"
     },
-    
-    "graph_decom": {
+    "Graph_Centroid_Decomposition": {
         "prefix": "graph_decom",
         "body": [
             "int ctz(int x) { return __builtin_ctz(x); }",
@@ -1569,8 +1567,7 @@
         ],
         "description": "graph_decom implementation"
     },
-    
-    "rbdsu": {
+    "Rollback_Disjoint_Set_Union": {
         "prefix": "rbdsu",
         "body": [
             "struct RollbackDSU {",
@@ -1664,7 +1661,7 @@
         ],
         "description": "rbdsu implementation"
     },
-    "treap": {
+    "Treap": {
         "prefix": "treap",
         "body": [
             "struct Node {",
@@ -1719,7 +1716,7 @@
         "description": "treap implementation"
     },
     
-    "graphflow": {
+    "Graph_Flow": {
         "prefix": "graphflow",
         "body": [
             "struct Random : std::mt19937 {",
@@ -1836,8 +1833,7 @@
         ],
         "description": "graphflow implementation"
     },
-    
-    "perseg": {
+    "Persistent_Segment_Tree": {
         "prefix": "perseg",
         "body": [
             "struct PersistentSegmentTree {",
@@ -1924,7 +1920,7 @@
         "description": "perseg implementation"
     },
     
-    "SegmentNode": {
+    "Segment_Node": {
         "prefix": "segmentnode",
         "body": [
             "struct Node {",
@@ -2042,7 +2038,7 @@
         "description": "SegmentNode implementation"
     },
     
-    "hld": {
+    "Heavy_Light_Decomposition": {
         "prefix": "hld",
         "body": [
             "struct HLD {",
@@ -2161,7 +2157,7 @@
         ],
         "description": "hld implementation"
     },
-    "fwht": {
+    "FWHT": {
         "prefix": "fwht",
         "body": [
             "void fwht(vector<long long>& a, bool invert = false) {",

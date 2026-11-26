@@ -12,23 +12,25 @@ def replace_spaces_with_tabs(code, spaces_per_tab=4):
         converted_lines.append(converted_line)
     return '\n'.join(converted_lines)
 
-def code_to_json_class(class_name, code):
+def code_to_json_class(class_name,prefix,code):
     formatted_code = replace_spaces_with_tabs(code)
     lines = [line.rstrip() for line in formatted_code.strip().split('\n')]
     json_structure = {
         class_name: {
-            "prefix": class_name.lower(),
+            "prefix": prefix.lower(),
             "body": lines,
             "description": f"{class_name} implementation"
         }
     }
     return json.dumps(json_structure, indent=4)
 
+## TODO: Input should be provided via the CLI itself
 tobeconverted = """
 """
 
+prefix = input("Enter Prefix : ")
 s = input("Enter The Name : ")
-json_output = code_to_json_class(s, tobeconverted)
+json_output = code_to_json_class(s,prefix,tobeconverted)
 print(json_output)
 
 s = json_output[1:-1]

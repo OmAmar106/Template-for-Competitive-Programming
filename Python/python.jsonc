@@ -12,7 +12,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-    "cp": {
+    "Fast_IO": {
         "prefix": "cp",
         "body": [
             "import sys,math,cmath,random,os",
@@ -112,7 +112,7 @@
         ],
         "description": "cp implementation"
     },
-    "tcp": {
+    "Fast_IO_1": {
 		"prefix": "tcp",
 		"body": [
 			"import sys,math,cmath,random,os",
@@ -210,7 +210,7 @@
 	    ],  
 		"description": "atcoder/cses template"
 	},
-    "detcp": {
+    "Fast_IO_2": {
         "prefix": "detcp",
         "body": [
             "import sys,math,cmath,random,os,time,psutil,hashlib",
@@ -304,7 +304,7 @@
         ],
         "description": "Template for details of runtime"
     },
-    "hull": {
+    "Convex_Hull": {
         "prefix": "hull",
         "body": [
             "class ConvexHull:",
@@ -444,7 +444,7 @@
         ],
         "description": "hull implementation"
     },
-    "pnc": {
+    "Combinatorics": {
         "prefix": "pnc",
         "body": [
             "def derangements(n):",
@@ -582,7 +582,7 @@
         ],
         "description": "pnc implementation"
     },
-    "numtheory": {
+    "Number_Theory": {
         "prefix": "numtheory",
         "body": [
             "def miller_is_prime(n):",
@@ -662,7 +662,7 @@
         ],
         "description": "numtheory implementation"
     },    
-    "numrare": {
+    "Number_Theory_Rare": {
         "prefix": "numrare",
         "body": [
             "def memodict(f):",
@@ -784,7 +784,7 @@
         ],
         "description": "numrare implementation"
     },
-    "nummat": {
+    "Matrix": {
         "prefix": "nummat",
         "body": [
             "class Matrix:",
@@ -841,7 +841,7 @@
         ],
         "description": "nummat implementation"
     },
-    "Sorted List": {
+    "Bucket_Sorted_List": {
         "prefix": "bsortl",
         "body": [
             "from typing import Generic, Iterable, Iterator, List, Tuple, TypeVar, Optional",
@@ -961,7 +961,7 @@
         ],
         "description": "Bucket Sorted List implementation"
     },
-    "SegmentOther": {
+    "Lazy_Segment_Tree": {
         "prefix": "segmentother",
         "body": [
             "class SegmentTree:",
@@ -1091,7 +1091,7 @@
         ],
         "description": "SegmentOther implementation"
     },
-	"sortl": {
+	"Fenwick_Sorted_List": {
         "prefix": "fsortl",
         "body": [
             "class FenwickTree:",
@@ -1177,7 +1177,7 @@
         ],
         "description": "sorted list using fenwick tree use for insertion,deletion,traversel in log(n)"
     },
-    "bootstrap": {
+    "Bootstrap": {
         "prefix": "bootstrap",
         "body": [
             "from types import GeneratorType",
@@ -1225,7 +1225,7 @@
         ],
         "description": "Decorator to increase recursion limit using the bootstrap method with yield."
     },
-    "sf": {
+    "String_Functions": {
         "prefix": "sf",
         "body": [
             "def SuffArr(st,flag=True):",
@@ -1386,7 +1386,7 @@
         ],
         "description": "sf implementation"
     },
-    "BIT": {
+    "Fenwick_Tree": {
         "prefix": "BIT",
         "body": [
             "class BIT:",
@@ -1423,7 +1423,7 @@
             "\t\treturn idx + 1"
         ]
     },
-    "segmentpoint": {
+    "Segment_Tree_Point_Update": {
         "prefix": "segmentpoint",
         "body": [
             "class SegmentTree:",
@@ -1472,7 +1472,7 @@
         ],
         "description": "segmentpoint implementation"
     },
-    "SparseTable": {
+    "Sparse_Table": {
         "prefix": "sparsetable",
         "body": [
             "class SparseTable:",
@@ -1508,7 +1508,7 @@
         ],
         "description": "SparseTable implementation"
     },
-    "dpheq": {
+    "Diophantine_Equations": {
         "prefix": "dpheq",
         "body": [
             "class DiophantineEquations:",
@@ -1576,7 +1576,7 @@
         ],
         "description": "dpheq implementation"
     },
-    "DSU": {
+    "Disjoint_Set_Union": {
         "prefix": "dsu",
         "body": [
             "class UnionFind:",
@@ -1634,7 +1634,7 @@
         ],
         "description": "DSU implementation"
     },
-    "shclass": {
+    "String_Hashing": {
         "prefix": "shclass",
         "body": [
             "HMOD = 2147483647",
@@ -1666,7 +1666,7 @@
         ],
         "description": "shclass implementation"
     },
-    "geometry": {
+    "Geometry": {
         "prefix": "geometry",
         "body": [
             "## here onwards, it is for intersection only, even the point class is different",
@@ -1804,7 +1804,7 @@
         ],
         "description": "Tries implementation"
     },
-    "FFT": {
+    "Fast_Fourier_Transformation": {
         "prefix": "fft",
         "body": [
             "class FastFFT:",
@@ -2000,7 +2000,7 @@
         ],
         "description": "FFT implementation"
     },
-    "perseg": {
+    "Persistent_Segment_Tree": {
         "prefix": "perseg",
         "body": [
             "class PersistentSegmentTree:",
@@ -2152,7 +2152,7 @@
         ],
         "description": "perseg implementation"
     },
-    "Binary Trie": {
+    "Binary_Trie": {
         "prefix": "b_trie",
         "body": [
             "class Node():",
@@ -2219,7 +2219,7 @@
         ],
         "description": "Binary Trie implementation"
     },
-    "xdict": {
+    "Xor_Dict": {
         "prefix": "xdict",
         "body": [
             "class Xdict:",
@@ -2275,7 +2275,7 @@
         ],
         "description": "xdict and xset implementation"
     },
-    "hld": {
+    "Heavy_Light_Decomposition": {
         "prefix": "hld",
         "body": [
             "class HLD:",
@@ -2454,7 +2454,7 @@
         ],
         "description": "hld implementation"
     },
-    "Bitarray": {
+    "Bit_Array": {
         "prefix": "bitarray",
         "body": [
             "class BitSet:",
@@ -2591,7 +2591,7 @@
         ],
         "description": "Bitarray implementation"
     },
-    "graphadv": {
+    "Graph_Advanced": {
         "prefix": "graphadv",
         "body": [
             "class AuxiliaryTree:",
@@ -2884,7 +2884,7 @@
         ],
         "description": "2sat implementation"
     },
-    "graphflatten": {
+    "Graph_Flatten": {
         "prefix": "graphflatten",
         "body": [
             "class UnionFind:",
@@ -2953,7 +2953,7 @@
         ],
         "description": "graphflatten implementation"
     },
-    "graphoth": {
+    "Graph_Other": {
         "prefix": "graphoth",
         "body": [
             "def euler_path(d):",
@@ -3047,7 +3047,7 @@
         ],
         "description": "graphoth implementation"
     },
-    "graph": {
+    "Graph": {
         "prefix": "graph",
         "body": [
             "def bfsf(d,start=0):",
@@ -3236,7 +3236,7 @@
         ],
         "description": "utils implementation"
     },
-    "perdsu": {
+    "Persistent_DSU": {
         "prefix": "perdsu",
         "body": [
             "class Node:",
@@ -3289,7 +3289,7 @@
         ],
         "description": "perdsu implementation"
     },
-    "Merge Sort Tree": {
+    "Merge_Sort_Tree": {
         "prefix": "sorttree",
         "body": [
             "class MergeSortTree:",
@@ -3339,7 +3339,7 @@
         ],
         "description": "sorttree implementation"
     },
-    "2DBIT": {
+    "2D_Fenwick_Tree": {
         "prefix": "2dbit",
         "body": [
             "class BIT2D:",
@@ -3386,7 +3386,7 @@
         ],
         "description": "2DBIT implementation"
     },
-    "mono": {
+    "Mono_Deque": {
         "prefix": "mono",
         "body": [
             "from typing import Callable, TypeVar, Generic, List",
@@ -3434,7 +3434,7 @@
         ],
         "description": "mono implementation"
     },
-    "sautomaton": {
+    "Suffix_Automaton": {
         "prefix": "sautomaton",
         "body": [
             "class KMPAutomaton:",
@@ -3659,7 +3659,7 @@
         ],
         "description": "sautomaton implementation"
     },
-    "linalg": {
+    "Linear_Algebra": {
         "prefix": "linalg",
         "body": [
             "def solve_quadratic(a, b, c):",
@@ -3842,7 +3842,7 @@
         ],
         "description": "linalg implementation"
     },
-    "sqrt": {
+    "Sqrt_Decomposition": {
         "prefix": "sqrt",
         "body": [
             "class SqrtDecomposition:",
@@ -3879,7 +3879,7 @@
         ],
         "description": "sqrt implementation"
     },
-    "graph_dmgt": {
+    "Graph_DMGT": {
         "prefix": "graph_dmgt",
         "body": [
             "def find_bridges(adj):",
@@ -4103,7 +4103,7 @@
         ],
         "description": "graph_dmgt implementation"
     },    
-    "fwht": {
+    "FWHT": {
         "prefix": "fwht",
         "body": [
             "def fwht(a, invert=False):",
@@ -4163,7 +4163,7 @@
         "description": "fwht implementation"
     },
     
-    "graph_decom": {
+    "Graph_Centroid_Decomposition": {
         "prefix": "graph_decom",
         "body": [
             "def shallowest_decomposition_tree(graph, root=0):",
@@ -4239,7 +4239,7 @@
         ],
         "description": "graph_decom implementation"
     },
-    "dpopt": {
+    "DP_Optimizations": {
         "prefix": "dpopt",
         "body": [
             "def Knuths(n,C = lambda x: x):",
@@ -4294,7 +4294,7 @@
         "description": "dpopt implementation"
     },
     
-    "rbdsu": {
+    "Rollback_DSU": {
         "prefix": "rbdsu",
         "body": [
             "class RollbackDSU:",
@@ -4342,8 +4342,7 @@
         ],
         "description": "rbdsu implementation"
     },
-        
-    "seg2d": {
+    "2D_Segment_Tree": {
         "prefix": "seg2d",
         "body": [
             "class SegTree2DInlined:",
@@ -4433,7 +4432,7 @@
         ],
         "description": "seg2d implementation"
     },
-    "graphflow": {
+    "Graph_Flow": {
         "prefix": "graphflow",
         "body": [
             "class MinCut:",
@@ -4587,7 +4586,7 @@
         ],
         "description": "graphflow implementation"
     },
-    "odc": {
+    "Offline_Dynamic_Connectivity": {
         "prefix": "odc",
         "body": [
             "class OfflineDynamicConnectivity:",
@@ -4650,7 +4649,7 @@
         ],
         "description": "odc implementation"
     },
-    "treap": {
+    "Treap": {
         "prefix": "treap",
         "body": [
             "class Node:",
@@ -4747,8 +4746,7 @@
         ],
         "description": "treap implementation"
     },
-    
-    "graphmatch": {
+    "Graph_Maximal_Matching": {
         "prefix": "graphmatch",
         "body": [
             "def kuhn(d,n,m):",
@@ -4872,7 +4870,7 @@
         ],
         "description": "graphmatch implementation"
     },
-    "SegmentNode": {
+    "Segment_Tree_Node": {
         "prefix": "segmentnode",
         "body": [
             "class Node:",
@@ -5018,7 +5016,7 @@
         ],
         "description": "SegmentNode implementation"
     },
-    "BWT": {
+    "Burrow_Wheeler_Transform": {
         "prefix": "bwt",
         "body": [
             "class BWT:",
@@ -5057,7 +5055,7 @@
         "description": "BWT implementation"
     },
     
-    "mcmf": {
+    "Min_Cost_Max_Flow": {
         "prefix": "mcmf",
         "body": [
             "class MCMF:",
@@ -5170,7 +5168,7 @@
         ],
         "description": "mcmf implementation"
     },
-    "Prefix2D": {
+    "2D_Prefix_Sum": {
         "prefix": "prefix2d",
         "body": [
             "class Prefix2D:",
@@ -5189,7 +5187,7 @@
         "description": "Prefix2D implementation"
     },
     
-    "SegmentTreeRec": {
+    "Recursive_Segment_Tree": {
         "prefix": "segmenttreerec",
         "body": [
             "class SegmentTree:",
@@ -5240,7 +5238,7 @@
         ],
         "description": "SegmentTreeRec implementation"
     },
-    "lct": {
+    "Link_Cut_Tree": {
         "prefix": "lct",
         "body": [
             "class LinkCutTree:",
@@ -5373,7 +5371,7 @@
         ],
         "description": "lct implementation"
     },
-    "asortl": {
+    "AVL_Sorted_List": {
         "prefix": "asortl",
         "body": [
             "from typing import Generic, Iterable, Iterator, TypeVar, Optional",
@@ -5625,8 +5623,7 @@
         ],
         "description": "asortl implementation"
     },
-
-    "numfast": {
+    "Number_Theory_Fast": {
         "prefix": "numfast",
         "body": [
             "def sieve_unique(N):",
