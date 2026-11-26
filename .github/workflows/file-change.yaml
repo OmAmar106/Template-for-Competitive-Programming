@@ -29,26 +29,35 @@ jobs:
         run: pip install json5
 
       - name: Find changed JSONC files
+        id: changed
         env:
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
           EVENT: ${{ github.event_name }}
         run: |
           if [[ "$EVENT" == "workflow_dispatch" ]] || [[ "$BEFORE" =~ ^0+$ ]]; then
-            git ls-files '*.jsonc' > changed.txt
+            FILES=$(git ls-files '*.jsonc')
           else
-            git diff --name-only --diff-filter=ACMRT "$BEFORE" "$AFTER" -- '*.jsonc' > changed.txt
+            FILES=$(git diff --name-only --diff-filter=ACMRT "$BEFORE" "$AFTER" -- '*.jsonc')
           fi
 
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Generate snippet files
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
         run: |
           python - <<'PY'
           import json5
           import re
+          import os
           from pathlib import Path
 
-          changed = Path("changed.txt").read_text().splitlines()
+          changed = os.environ["CHANGED_FILES"].splitlines()
 
           for filename in changed:
               source = Path(filename)
@@ -70,7 +79,7 @@ jobs:
 
               output_dir.mkdir(parents=True, exist_ok=True)
 
-              extension = source.stem
+              extension = {"python": "py", "cpp": "cpp"}.get(source.stem, source.stem)
 
               for old_file in output_dir.iterdir():
                   if old_file.is_file() and old_file.suffix == f".{extension}":
