@@ -32,8 +32,9 @@ jobs:
         env:
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
+          EVENT: ${{ github.event_name }}
         run: |
-          if [[ "$BEFORE" =~ ^0+$ ]]; then
+          if [[ "$EVENT" == "workflow_dispatch" ]] || [[ "$BEFORE" =~ ^0+$ ]]; then
             git ls-files '*.jsonc' > changed.txt
           else
             git diff --name-only --diff-filter=ACMRT "$BEFORE" "$AFTER" -- '*.jsonc' > changed.txt
