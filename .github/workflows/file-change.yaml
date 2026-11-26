@@ -1,0 +1,112 @@
+
+name: Sync Snippets
+
+on:
+  push:
+    paths:
+      - '**/*.jsonc'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install json5
+
+      - name: Find changed JSONC files
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          if [[ "$BEFORE" =~ ^0+$ ]]; then
+            git ls-files '*.jsonc' > changed.txt
+          else
+            git diff --name-only --diff-filter=ACMRT "$BEFORE" "$AFTER" -- '*.jsonc' > changed.txt
+          fi
+
+
+      - name: Generate snippet files
+        run: |
+          python - <<'PY'
+          import json5
+          import re
+          from pathlib import Path
+
+          changed = Path("changed.txt").read_text().splitlines()
+
+          for filename in changed:
+              source = Path(filename)
+
+              if not source.exists():
+                  continue
+
+              data = json5.loads(source.read_text(encoding="utf-8"))
+
+              folders = list(source.parent.glob("*_Snippet_Files"))
+
+              if len(folders) > 1:
+                  raise RuntimeError(f"Multiple snippet folders found for {source}")
+
+              if folders:
+                  output_dir = folders[0]
+              else:
+                  output_dir = source.parent / f"{source.parent.name}_Snippet_Files"
+
+              output_dir.mkdir(parents=True, exist_ok=True)
+
+              extension = source.stem
+
+              for old_file in output_dir.iterdir():
+                  if old_file.is_file() and old_file.suffix == f".{extension}":
+                      old_file.unlink()
+
+              print(f"Processing {source}")
+
+              for name, snippet in data.items():
+                  body = snippet["body"]
+
+                  if isinstance(body, list):
+                      code = "\n".join(str(line) for line in body)
+                  else:
+                      code = str(body)
+
+                  safe_name = re.sub(r'[<>:"/\\|?*]', '_', name)
+                  safe_name = re.sub(r'\s+', '_', safe_name).strip(' ._')
+
+                  if not safe_name:
+                      raise ValueError(f"Invalid snippet name: {name}")
+
+                  output_file = output_dir / f"{safe_name}.{extension}"
+                  output_file.write_text(code + "\n", encoding="utf-8")
+
+                  print(f"Generated {output_file}")
+
+          PY
+
+      - name: Commit generated snippets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add '*_Snippet_Files/'
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update generated snippets"
+            git push
+          else
+            echo "No snippet changes to commit"
+          fi
